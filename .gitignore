@@ -1,0 +1,13 @@
+# Project handoff / AI context notes
+PROJECT_HANDOFF.md
+
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
