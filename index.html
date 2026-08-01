@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Café Doke — Peace · Flavor · Community | Nepalgunj, Nepal</title>
-<meta name="description" content="Café Doke in Nepalgunj, Nepal — a premium café inspired by the traditional Nepali Doko basket. Specialty coffee, artisan food, warm hospitality and a peaceful community space.">
-<meta name="keywords" content="café doke, nepalgunj cafe, specialty coffee nepal, cafe nepalgunj, doko cafe">
-<meta property="og:title" content="Café Doke — Peace · Flavor · Community">
-<meta property="og:description" content="A premium café in Nepalgunj, Nepal inspired by the Doko tradition. Specialty coffee, artisan bites, peaceful ambiance.">
-<meta property="og:image" content="cafe_gallery/main_entrance.jpg">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Café Doke — Nepalgunj, Nepal">
-<meta name="twitter:description" content="Specialty coffee, artisan food, and a warm community space in Nepalgunj.">
-<meta name="twitter:image" content="cafe_gallery/main_entrance.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Doke — Peace · Flavor · Community | Nepalgunj, Nepal</title>
+  <meta name="description"
+    content="Café Doke in Nepalgunj, Nepal — a premium café inspired by the traditional Nepali Doko basket. Specialty coffee, artisan food, warm hospitality and a peaceful community space.">
+  <meta name="keywords" content="café doke, nepalgunj cafe, specialty coffee nepal, cafe nepalgunj, doko cafe">
+  <meta property="og:title" content="Café Doke — Peace · Flavor · Community">
+  <meta property="og:description"
+    content="A premium café in Nepalgunj, Nepal inspired by the Doko tradition. Specialty coffee, artisan bites, peaceful ambiance.">
+  <meta property="og:image" content="cafe_gallery/main_entrance.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Café Doke — Nepalgunj, Nepal">
+  <meta name="twitter:description" content="Specialty coffee, artisan food, and a warm community space in Nepalgunj.">
+  <meta name="twitter:image" content="cafe_gallery/main_entrance.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CafeOrCoffeeShop",
@@ -38,861 +43,1011 @@
 }
 </script>
 </head>
+
 <body>
 
-<!-- ══ LIGHTBOX ══ -->
-<div class="lb-backdrop" id="lbBackdrop" onclick="closeLightbox()"></div>
-<div class="lb-content" id="lbContent">
-  <img class="lb-img" id="lbImg" src="" alt="">
-</div>
-<button class="lb-close" onclick="closeLightbox()" aria-label="Close">✕</button>
-<button class="lb-prev" onclick="prevLbImg()" aria-label="Previous">‹</button>
-<button class="lb-next" onclick="nextLbImg()" aria-label="Next">›</button>
+  <!-- ══ LIGHTBOX ══ -->
+  <div class="lb-backdrop" id="lbBackdrop" onclick="closeLightbox()"></div>
+  <div class="lb-content" id="lbContent">
+    <img class="lb-img" id="lbImg" src="" alt="">
+  </div>
+  <button class="lb-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+  <button class="lb-prev" onclick="prevLbImg()" aria-label="Previous">‹</button>
+  <button class="lb-next" onclick="nextLbImg()" aria-label="Next">›</button>
 
-<!-- ══ MOBILE MENU ══ -->
-<nav class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
-  <a href="#story" onclick="closeMobileMenu()">Our Story</a>
-  <a href="#menu" onclick="closeMobileMenu()">Menu</a>
-  <a href="#vibe" onclick="closeMobileMenu()">Gallery</a>
-  <a href="#why" onclick="closeMobileMenu()">Why Us</a>
-  <a href="#contact" onclick="closeMobileMenu()">Visit Us</a>
-  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});closeMobileMenu()">Reserve a Spot</button>
-</nav>
+  <!-- ══ MOBILE MENU ══ -->
+  <nav class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+    <a href="#story" onclick="closeMobileMenu()">Our Story</a>
+    <a href="#menu" onclick="closeMobileMenu()">Menu</a>
+    <a href="#vibe" onclick="closeMobileMenu()">Gallery</a>
+    <a href="#why" onclick="closeMobileMenu()">Why Us</a>
+    <a href="#contact" onclick="closeMobileMenu()">Visit Us</a>
+    <button class="nav-cta"
+      onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});closeMobileMenu()">Reserve a
+      Spot</button>
+  </nav>
 
-<!-- ══ NAV ══ -->
-<nav id="mainNav" role="navigation" aria-label="Main navigation">
-  <a href="#hero" class="nav-logo" aria-label="Café Doke home">
-    <div class="nav-logo-circle">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="20" cy="20" r="19" stroke="#C49A3A" stroke-width="1.2"/>
-        <path d="M5 29 L13 13 L20 22 L28 9 L35 29Z" fill="#4A6741" opacity="0.85"/>
-        <path d="M9 29 Q7 22 9 16 Q11 22 9 29" fill="#3D6438"/>
-        <path d="M31 29 Q29 22 31 16 Q33 22 31 29" fill="#3D6438"/>
-        <rect x="14" y="27" width="12" height="3" rx="1.5" fill="#C49A3A" opacity="0.9"/>
+  <!-- ══ NAV ══ -->
+  <nav id="mainNav" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Café Doke home">
+      <div class="nav-logo-circle">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" stroke="#C49A3A" stroke-width="1.2" />
+          <path d="M5 29 L13 13 L20 22 L28 9 L35 29Z" fill="#4A6741" opacity="0.85" />
+          <path d="M9 29 Q7 22 9 16 Q11 22 9 29" fill="#3D6438" />
+          <path d="M31 29 Q29 22 31 16 Q33 22 31 29" fill="#3D6438" />
+          <rect x="14" y="27" width="12" height="3" rx="1.5" fill="#C49A3A" opacity="0.9" />
+        </svg>
+      </div>
+      <div class="nav-brand">Café <span>Doke</span></div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#vibe">Gallery</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#contact">Visit Us</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Reserve a
+      Spot</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="hero" aria-label="Welcome to Café Doke">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-woven"></div>
+
+    <!-- Floating leaves -->
+    <div class="leaf" style="top:8%;left:3%;animation-delay:0s;" aria-hidden="true">
+      <svg width="90" height="130" viewBox="0 0 90 130">
+        <path d="M45 8 Q88 55 45 122 Q2 55 45 8Z" />
       </svg>
     </div>
-    <div class="nav-brand">Café <span>Doke</span></div>
-  </a>
-  <ul class="nav-links" role="list">
-    <li><a href="#story">Our Story</a></li>
-    <li><a href="#menu">Menu</a></li>
-    <li><a href="#vibe">Gallery</a></li>
-    <li><a href="#why">Why Us</a></li>
-    <li><a href="#contact">Visit Us</a></li>
-  </ul>
-  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Reserve a Spot</button>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle mobile menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+    <div class="leaf" style="top:5%;right:6%;animation-delay:2.4s;transform:scale(1.5) rotate(25deg);"
+      aria-hidden="true">
+      <svg width="70" height="110" viewBox="0 0 70 110">
+        <path d="M35 5 Q70 45 35 105 Q0 45 35 5Z" />
+      </svg>
+    </div>
+    <div class="leaf" style="bottom:12%;left:2%;animation-delay:1s;transform:scale(1.1) rotate(-20deg);"
+      aria-hidden="true">
+      <svg width="60" height="90" viewBox="0 0 60 90">
+        <path d="M30 5 Q60 38 30 85 Q0 38 30 5Z" />
+      </svg>
+    </div>
+    <div class="leaf" style="bottom:8%;right:4%;animation-delay:3.2s;transform:scale(1.4) rotate(12deg);"
+      aria-hidden="true">
+      <svg width="80" height="120" viewBox="0 0 80 120">
+        <path d="M40 7 Q80 50 40 113 Q0 50 40 7Z" />
+      </svg>
+    </div>
 
-<!-- ══ HERO ══ -->
-<section class="hero" id="hero" aria-label="Welcome to Café Doke">
-  <div class="hero-bg-pattern"></div>
-  <div class="hero-woven"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">✦ Now Open in Nepalgunj</div>
+        <h1>Where Every Cup<br><em>Tells a Story.</em></h1>
+        <p class="hero-tagline">Peace · Flavor · Community</p>
+        <p class="hero-desc">Inspired by the Doko — the woven bamboo basket that carries everything — Café Doke is our
+          little corner of warmth, specialty coffee, and Nepali soul in the heart of Nepalgunj.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+            ☕ Explore Menu
+          </button>
+          <button class="btn-outline" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
+            Our Story →
+          </button>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">08AM</div>
+            <div class="hero-stat-lbl">Opens Daily</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">30+</div>
+            <div class="hero-stat-lbl">Menu Items</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">100%</div>
+            <div class="hero-stat-lbl">Handcrafted</div>
+          </div>
+        </div>
+      </div>
 
-  <!-- Floating leaves -->
-  <div class="leaf" style="top:8%;left:3%;animation-delay:0s;" aria-hidden="true">
-    <svg width="90" height="130" viewBox="0 0 90 130"><path d="M45 8 Q88 55 45 122 Q2 55 45 8Z"/></svg>
-  </div>
-  <div class="leaf" style="top:5%;right:6%;animation-delay:2.4s;transform:scale(1.5) rotate(25deg);" aria-hidden="true">
-    <svg width="70" height="110" viewBox="0 0 70 110"><path d="M35 5 Q70 45 35 105 Q0 45 35 5Z"/></svg>
-  </div>
-  <div class="leaf" style="bottom:12%;left:2%;animation-delay:1s;transform:scale(1.1) rotate(-20deg);" aria-hidden="true">
-    <svg width="60" height="90" viewBox="0 0 60 90"><path d="M30 5 Q60 38 30 85 Q0 38 30 5Z"/></svg>
-  </div>
-  <div class="leaf" style="bottom:8%;right:4%;animation-delay:3.2s;transform:scale(1.4) rotate(12deg);" aria-hidden="true">
-    <svg width="80" height="120" viewBox="0 0 80 120"><path d="M40 7 Q80 50 40 113 Q0 50 40 7Z"/></svg>
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img class="hero-main-img" src="cafe_gallery/main_entrance.jpg"
+            alt="Café Doke main entrance — a warm, inviting café in Nepalgunj" loading="eager">
+          <div class="hero-img-overlay"></div>
+        </div>
+        <div class="hero-float-card">
+          <div class="f-label">✦ Signature Pick</div>
+          <div class="f-title">Doke Latte</div>
+          <div class="f-sub">House-crafted · Rs. 199</div>
+        </div>
+        <div class="hero-float-badge">
+          <span>Est.</span>
+          <span>2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ GRAND OPENING BANNER ══ -->
+  <div class="opening-banner" role="banner">
+    <div>
+      <div class="opening-badge-text">🎉 Grand Opening Announcement</div>
+      <div class="opening-headline">27 <em>Baisakh</em> — We're Open!</div>
+    </div>
+    <div class="opening-detail">
+      <strong>Near SK Petrol Pump, Karkando-18, Nepalgunj</strong>
+      <span>Come celebrate · Food · Coffee · Hookah · 08:00 AM onwards</span>
+    </div>
+    <button class="btn-opening" onclick="window.open('https://maps.app.goo.gl/r9h5XNTfH3uLbJM97','_blank')"
+      aria-label="Get directions to Café Doke">Get Directions ›</button>
   </div>
 
-  <div class="hero-content">
-    <div class="hero-text">
-      <div class="hero-badge">✦ Now Open in Nepalgunj</div>
-      <h1>Where Every Cup<br><em>Tells a Story.</em></h1>
-      <p class="hero-tagline">Peace · Flavor · Community</p>
-      <p class="hero-desc">Inspired by the Doko — the woven bamboo basket that carries everything — Café Doke is our little corner of warmth, specialty coffee, and Nepali soul in the heart of Nepalgunj.</p>
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
-          ☕ Explore Menu
+  <!-- ══ STORY ══ -->
+  <section class="story-section" id="story" aria-labelledby="story-heading">
+    <div class="story-grid">
+      <div class="story-text reveal-left">
+        <span class="section-label">The Doko Story</span>
+        <h2 class="section-title" id="story-heading">Woven with<br><em>Roots &amp; Soul.</em></h2>
+        <p>The <strong>Doko</strong> — a traditional Nepali woven bamboo basket — carries everything: harvests, goods,
+          memories, and meaning. We built this café around that same spirit: a place that holds community, flavor, and
+          peace in every corner.</p>
+        <p>Born in Nepalgunj with the energy of youth and the warmth of tradition, Café Doke blends hand-brewed
+          specialty coffee with Nepali street bites, curated lounges, and an atmosphere that feels like coming home —
+          even the very first time.</p>
+        <div class="story-pills">
+          <span class="pill pill-green">🌿 Indoor Plants</span>
+          <span class="pill pill-terra">🪵 Natural Wood</span>
+          <span class="pill pill-bamboo">🧺 Woven Textures</span>
+          <span class="pill pill-green">☕ Specialty Coffee</span>
+          <span class="pill pill-terra">🫶 Community First</span>
+        </div>
+      </div>
+      <div class="story-visual reveal-right">
+        <div class="story-img">
+          <img src="cafe_gallery/seating_area.jpg" alt="The warm, thoughtfully designed seating area at Café Doke"
+            loading="lazy">
+        </div>
+        <div class="story-float-card">
+          <div class="num">2025</div>
+          <div class="lbl">Founded in Nepalgunj</div>
+        </div>
+        <div class="story-float-icon">🌿</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MENU ══ -->
+  <section class="menu-section" id="menu" aria-labelledby="menu-heading">
+    <div style="max-width:1200px;margin:0 auto">
+      <span class="section-label">What We Serve</span>
+      <h2 class="section-title reveal" id="menu-heading">Crafted with<br><em>Passion &amp; Pride.</em></h2>
+      <p class="section-sub reveal">Every item is thoughtfully prepared — from our hand-pulled espresso shots to our
+        freshly baked croissants, each order is a small act of love.</p>
+
+      <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+        <button class="mtab active" role="tab" aria-selected="true" onclick="switchTab(this,'coffee')" id="tab-coffee">☕
+          Coffee</button>
+        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'tea')" id="tab-tea">🍵
+          Tea</button>
+        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'signature')" id="tab-signature">✨
+          Signature</button>
+        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'food')" id="tab-food">🍽
+          Food</button>
+        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'new')" id="tab-new">✨ New
+          Arrivals</button>
+        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'desserts')" id="tab-desserts">🍰
+          Desserts</button>
+        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'lounge')" id="tab-lounge">💨
+          Lounge</button>
+      </div>
+
+      <!-- COFFEE -->
+      <div class="menu-panel active" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee">
+        <div class="cat-header">
+          <div class="cat-header-line"></div><span class="cat-header-title">Coffee &amp; Espresso</span>
+          <div class="cat-header-line"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge hot">🔥 Bestseller</div>
+              <div class="mi-name">Doke Signature Latte</div>
+              <div class="mi-desc">Our house blend, velvety steamed milk, a hint of cardamom</div>
+            </div>
+            <div class="mi-price">Rs. 199</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Flat White</div>
+              <div class="mi-desc">Double ristretto, micro-foam steamed milk, smooth finish</div>
+            </div>
+            <div class="mi-price">Rs. 169</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Cappuccino</div>
+              <div class="mi-desc">Classic Italian style, rich espresso, silky foam</div>
+            </div>
+            <div class="mi-price">Rs. 149</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Americano</div>
+              <div class="mi-desc">Bold espresso with hot water, clean and strong</div>
+            </div>
+            <div class="mi-price">Rs. 119</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge new">✨ New</div>
+              <div class="mi-name">Cold Brew</div>
+              <div class="mi-desc">12-hour slow-extracted, served over ice, smooth &amp; bold</div>
+            </div>
+            <div class="mi-price">Rs. 189</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Espresso Shot</div>
+              <div class="mi-desc">Double pulled, crema-rich, intense &amp; aromatic</div>
+            </div>
+            <div class="mi-price">Rs. 99</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Macchiato</div>
+              <div class="mi-desc">Espresso stained with a dollop of milk foam</div>
+            </div>
+            <div class="mi-price">Rs. 129</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Café Mocha</div>
+              <div class="mi-desc">Espresso, rich chocolate, steamed milk, whipped cream</div>
+            </div>
+            <div class="mi-price">Rs. 179</div>
+          </div>
+        </div>
+        <div class="menu-note">All coffees available hot or iced · Oat milk available on request · Prices include tax
+        </div>
+      </div>
+
+      <!-- TEA -->
+      <div class="menu-panel" id="panel-tea" role="tabpanel" aria-labelledby="tab-tea">
+        <div class="cat-header">
+          <div class="cat-header-line"></div><span class="cat-header-title">Tea &amp; Infusions</span>
+          <div class="cat-header-line"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge hot">🔥 Bestseller</div>
+              <div class="mi-name">Nepali Masala Chiya</div>
+              <div class="mi-desc">Traditional spiced milk tea with ginger, cardamom &amp; cinnamon</div>
+            </div>
+            <div class="mi-price">Rs. 89</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Lemon Ginger Green Tea</div>
+              <div class="mi-desc">Fresh lemon, ginger, premium green tea leaves</div>
+            </div>
+            <div class="mi-price">Rs. 109</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Chamomile Honey</div>
+              <div class="mi-desc">Soothing chamomile with wildflower honey and mint</div>
+            </div>
+            <div class="mi-price">Rs. 119</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Earl Grey</div>
+              <div class="mi-desc">Classic bergamot infused black tea, served with milk</div>
+            </div>
+            <div class="mi-price">Rs. 109</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge new">✨ New</div>
+              <div class="mi-name">Rose Hibiscus Iced Tea</div>
+              <div class="mi-desc">Floral, tart &amp; refreshing, served chilled with petals</div>
+            </div>
+            <div class="mi-price">Rs. 139</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Black Milk Tea</div>
+              <div class="mi-desc">Strong Himalayan tea, full-cream milk, no sugar option</div>
+            </div>
+            <div class="mi-price">Rs. 79</div>
+          </div>
+        </div>
+        <div class="menu-note">All teas can be served iced upon request · Sweetener adjustable</div>
+      </div>
+
+      <!-- SIGNATURE -->
+      <div class="menu-panel" id="panel-signature" role="tabpanel" aria-labelledby="tab-signature">
+        <div class="cat-header">
+          <div class="cat-header-line"></div><span class="cat-header-title">Signature Drinks</span>
+          <div class="cat-header-line"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge hot">🔥 Must Try</div>
+              <div class="mi-name">Doko Cooler</div>
+              <div class="mi-desc">Cold brew, coconut water, mint &amp; brown sugar syrup over ice</div>
+            </div>
+            <div class="mi-price">Rs. 229</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Himalayan Haze</div>
+              <div class="mi-desc">Espresso, yak milk foam, saffron &amp; honey drizzle</div>
+            </div>
+            <div class="mi-price">Rs. 249</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Forest Matcha Latte</div>
+              <div class="mi-desc">Ceremonial-grade matcha, oat milk foam, honey swirl</div>
+            </div>
+            <div class="mi-price">Rs. 219</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge new">✨ New</div>
+              <div class="mi-name">Amber Caramel Freeze</div>
+              <div class="mi-desc">Blended cold brew, salted caramel, whipped cream top</div>
+            </div>
+            <div class="mi-price">Rs. 239</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Nepali Spiced Cocoa</div>
+              <div class="mi-desc">Dark chocolate, Himalayan spices, warm steamed milk</div>
+            </div>
+            <div class="mi-price">Rs. 199</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Fresh Fruit Smoothie</div>
+              <div class="mi-desc">Seasonal local fruits, yogurt, honey — blended fresh</div>
+            </div>
+            <div class="mi-price">Rs. 179</div>
+          </div>
+        </div>
+        <div class="menu-note">Seasonal specials may vary · Ask our barista for today's special creation</div>
+      </div>
+
+      <!-- FOOD -->
+      <div class="menu-panel" id="panel-food" role="tabpanel" aria-labelledby="tab-food">
+        <div class="cat-header">
+          <div class="cat-header-line"></div><span class="cat-header-title">Bites &amp; Meals</span>
+          <div class="cat-header-line"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge hot">🔥 Bestseller</div>
+              <div class="mi-name">Butter Croissant</div>
+              <div class="mi-desc">Flaky, layered &amp; freshly baked every morning. Best with our house latte.</div>
+            </div>
+            <div class="mi-price">Rs. 119</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Club Sandwich</div>
+              <div class="mi-desc">Triple-decker with chicken, egg, lettuce &amp; house sauce</div>
+            </div>
+            <div class="mi-price">Rs. 249</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Avocado Toast</div>
+              <div class="mi-desc">Sourdough, smashed avocado, cherry tomatoes, feta, EVOO</div>
+            </div>
+            <div class="mi-price">Rs. 229</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge new">✨ New</div>
+              <div class="mi-name">Shakshuka</div>
+              <div class="mi-desc">Poached eggs in spiced tomato sauce, served with bread</div>
+            </div>
+            <div class="mi-price">Rs. 269</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Cheese Pasta</div>
+              <div class="mi-desc">Al dente pasta, creamy white sauce, herbs &amp; parmesan</div>
+            </div>
+            <div class="mi-price">Rs. 289</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Veggie Wrap</div>
+              <div class="mi-desc">Grilled vegetables, hummus, fresh greens in a whole-wheat wrap</div>
+            </div>
+            <div class="mi-price">Rs. 189</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Chicken Panini</div>
+              <div class="mi-desc">Grilled chicken, mozzarella, pesto, sundried tomatoes</div>
+            </div>
+            <div class="mi-price">Rs. 239</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Breakfast Plate</div>
+              <div class="mi-desc">Eggs your way, toast, grilled tomato, hash brown &amp; sausage</div>
+            </div>
+            <div class="mi-price">Rs. 319</div>
+          </div>
+        </div>
+        <div class="menu-note">Vegetarian-friendly options available · Customisations welcome · Ask team for allergies
+        </div>
+      </div>
+
+      <!-- NEW ARRIVALS -->
+      <div class="menu-panel" id="panel-new" role="tabpanel" aria-labelledby="tab-new">
+        <div class="cat-header">
+          <div class="cat-header-line"></div><span class="cat-header-title">New Arrivals</span>
+          <div class="cat-header-line"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge new">✨ New</div>
+              <div class="mi-name">Special Chicken Roast</div>
+              <div class="mi-desc">Our signature roasted chicken with traditional Nepali spices</div>
+            </div>
+            <div class="mi-price">Rs. 399</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge new">✨ New</div>
+              <div class="mi-name">Doke Chowmein</div>
+              <div class="mi-desc">Stir-fried noodles with fresh vegetables, chicken, and house soy sauce</div>
+            </div>
+            <div class="mi-price">Rs. 249</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge new">✨ New</div>
+              <div class="mi-name">Current Noodles with Egg</div>
+              <div class="mi-desc">Spicy current noodles paired with a perfectly sunny-side-up egg</div>
+            </div>
+            <div class="mi-price">Rs. 189</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge new">✨ New</div>
+              <div class="mi-name">Chef's Special Momos</div>
+              <div class="mi-desc">Steamed dumplings, seasoned with a secret spice blend</div>
+            </div>
+            <div class="mi-price">Rs. 229</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge new">✨ New</div>
+              <div class="mi-name">Crispy Corn</div>
+              <div class="mi-desc">Golden fried sweet corn tossed with salt, pepper, and spring onions</div>
+            </div>
+            <div class="mi-price">Rs. 199</div>
+          </div>
+        </div>
+        <div class="menu-note">Explore our latest culinary additions · Freshly prepared just for you
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="menu-panel" id="panel-desserts" role="tabpanel" aria-labelledby="tab-desserts">
+        <div class="cat-header">
+          <div class="cat-header-line"></div><span class="cat-header-title">Desserts &amp; Pastries</span>
+          <div class="cat-header-line"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge hot">🔥 Bestseller</div>
+              <div class="mi-name">Double Chocolate Muffin</div>
+              <div class="mi-desc">Dense, moist &amp; baked fresh each morning with premium cocoa.</div>
+            </div>
+            <div class="mi-price">Rs. 89</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Tiramisu</div>
+              <div class="mi-desc">Classic Italian style, espresso-soaked ladyfingers, mascarpone cream</div>
+            </div>
+            <div class="mi-price">Rs. 179</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Cheesecake (Slice)</div>
+              <div class="mi-desc">New York style, graham cracker crust, berry compote top</div>
+            </div>
+            <div class="mi-price">Rs. 159</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge new">✨ New</div>
+              <div class="mi-name">Matcha Panna Cotta</div>
+              <div class="mi-desc">Silky Japanese-style, ceremonial matcha, honey &amp; rose petal</div>
+            </div>
+            <div class="mi-price">Rs. 189</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Warm Brownie</div>
+              <div class="mi-desc">Fudgy dark chocolate brownie, served warm with vanilla ice cream</div>
+            </div>
+            <div class="mi-price">Rs. 149</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Seasonal Donut</div>
+              <div class="mi-desc">Glazed, filled &amp; flavored with the season's best ingredients</div>
+            </div>
+            <div class="mi-price">Rs. 99</div>
+          </div>
+        </div>
+        <div class="menu-note">Freshly baked daily, quantities limited · Ask for today's special dessert</div>
+      </div>
+
+      <!-- LOUNGE -->
+      <div class="menu-panel" id="panel-lounge" role="tabpanel" aria-labelledby="tab-lounge">
+        <div class="cat-header">
+          <div class="cat-header-line"></div><span class="cat-header-title">Lounge &amp; Hookah</span>
+          <div class="cat-header-line"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge hot">🔥 Popular</div>
+              <div class="mi-name">Classic Hookah</div>
+              <div class="mi-desc">Premium imported tobacco, charcoal-lit, 60-min session</div>
+            </div>
+            <div class="mi-price">Rs. 499</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Double Apple</div>
+              <div class="mi-desc">Signature fruity blend, freshly prepared, smooth draw</div>
+            </div>
+            <div class="mi-price">Rs. 549</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-name">Mint Freshness</div>
+              <div class="mi-desc">Cool mint blend, refreshing palate, long lasting</div>
+            </div>
+            <div class="mi-price">Rs. 499</div>
+          </div>
+          <div class="menu-item">
+            <div class="mi-left">
+              <div class="mi-badge new">✨ New</div>
+              <div class="mi-name">Doke Special Blend</div>
+              <div class="mi-desc">Our house mix — a mystery blend that guests always love</div>
+            </div>
+            <div class="mi-price">Rs. 599</div>
+          </div>
+        </div>
+        <div class="menu-note">Hookah available 4:00 PM onwards · 18+ only · Enjoy responsibly in our lounge area</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ GALLERY / VIBE ══ -->
+  <section class="vibe-section" id="vibe" aria-labelledby="vibe-heading">
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="vibe-header reveal">
+        <span class="section-label">The Vibe</span>
+        <h2 class="section-title" id="vibe-heading">Experience the<br><em>Doke Atmosphere.</em></h2>
+        <p class="vibe-sub">Every corner crafted with intention — bamboo textures, warm wood, lush plants, and golden
+          light. A space that invites you to slow down and truly be present.</p>
+      </div>
+
+      <div class="vibe-grid" id="vibeGrid">
+        <div class="vibe-cell" onclick="openLightbox(0)" tabindex="0" role="button"
+          aria-label="View main entrance image">
+          <img class="vibe-real-img" src="cafe_gallery/main_entrance.jpg" alt="Café Doke main entrance" loading="lazy">
+          <div class="vibe-label">
+            <div class="vibe-label-sub">First Impression</div>
+            <div class="vibe-label-title">The Entrance</div>
+          </div>
+        </div>
+        <div class="vibe-cell" onclick="openLightbox(1)" tabindex="0" role="button" aria-label="View outdoor seating">
+          <img class="vibe-real-img" src="cafe_gallery/outdoor_view.jpg" alt="Café Doke outdoor view" loading="lazy">
+          <div class="vibe-label">
+            <div class="vibe-label-sub">Open Air</div>
+            <div class="vibe-label-title">Outdoor Seating</div>
+          </div>
+        </div>
+        <div class="vibe-cell" onclick="openLightbox(2)" tabindex="0" role="button" aria-label="View outdoor patio">
+          <img class="vibe-real-img" src="cafe_gallery/outdoor_view2.jpg" alt="Café Doke outdoor patio" loading="lazy">
+          <div class="vibe-label">
+            <div class="vibe-label-sub">Garden View</div>
+            <div class="vibe-label-title">Patio Space</div>
+          </div>
+        </div>
+        <div class="vibe-cell" onclick="openLightbox(3)" tabindex="0" role="button" aria-label="View seating area">
+          <img class="vibe-real-img" src="cafe_gallery/seating_area.jpg" alt="Café Doke seating area" loading="lazy">
+          <div class="vibe-label">
+            <div class="vibe-label-sub">The Interior</div>
+            <div class="vibe-label-title">Seating &amp; Comfort</div>
+          </div>
+        </div>
+        <div class="vibe-cell" onclick="openLightbox(4)" tabindex="0" role="button" aria-label="View terrace">
+          <img class="vibe-real-img" src="cafe_gallery/outdoor_view_3.jpg" alt="Café Doke terrace" loading="lazy">
+          <div class="vibe-label">
+            <div class="vibe-label-sub">Evening Light</div>
+            <div class="vibe-label-title">The Terrace</div>
+          </div>
+        </div>
+        <div class="vibe-cell" onclick="openLightbox(5)" tabindex="0" role="button" aria-label="Meet our team">
+          <img class="vibe-real-img" src="cafe_gallery/cafe_staffs.jpg" alt="The Café Doke team ready to serve you"
+            loading="lazy">
+          <div class="vibe-label">
+            <div class="vibe-label-sub">Friendly Faces</div>
+            <div class="vibe-label-title">Our Team</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vibe-view-all reveal" style="display:flex; flex-direction:column; align-items:center; gap:24px;">
+        <a href="https://www.instagram.com/cafe_doke?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          target="_blank" rel="noopener" class="btn-outline"
+          style="color:rgba(245,237,216,.7);border-color:rgba(245,237,216,.2);"
+          aria-label="View more photos on Instagram">
+          View More on Instagram →
+        </a>
+        <div style="text-align:center;">
+          <p
+            style="font-family:var(--font-nav); font-size:11px; letter-spacing:0.1em; color:rgba(245,237,216,0.5); margin-bottom:12px; text-transform:uppercase;">
+            Scan to follow us</p>
+          <img src="cafe_gallery/food_items/sticker_image.jpg" alt="Café Doke Instagram QR Code"
+            style="width:140px; height:140px; border-radius:12px; border:2px solid rgba(245,237,216,0.3); opacity:0.9;"
+            onerror="this.onerror=null;this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/cafe_doke';">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WHY CHOOSE US ══ -->
+  <section class="why-section" id="why" aria-labelledby="why-heading">
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="why-header reveal">
+        <span class="section-label">Why Doke?</span>
+        <h2 class="section-title" id="why-heading">Crafted for Those<br><em>Who Appreciate.</em></h2>
+        <p class="section-sub">We pay attention to the details others overlook — because you deserve more than just a
+          cup of coffee.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon">☕</div>
+          <h3>Fresh Specialty Coffee</h3>
+          <p>Single-origin beans, freshly ground to order. Every shot pulled with precision for optimal extraction and
+            flavour.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.1s">
+          <div class="why-icon">🌿</div>
+          <h3>Nature Inspired Space</h3>
+          <p>Bamboo textures, living plants, warm wood — an environment consciously designed to bring you calm and
+            clarity.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.2s">
+          <div class="why-icon">🫶</div>
+          <h3>Traditional Hospitality</h3>
+          <p>Rooted in Nepali warmth. Every guest is treated like family — because that's the Doko way.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.05s">
+          <div class="why-icon">📶</div>
+          <h3>Fast &amp; Free WiFi</h3>
+          <p>High-speed internet throughout, making Café Doke the ideal workspace for students, creators, and
+            professionals.</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.15s">
+          <div class="why-icon">🌳</div>
+          <h3>Outdoor Seating</h3>
+          <p>A beautiful outdoor garden and patio space, perfect for morning coffees, evening conversations, and groups.
+          </p>
+        </div>
+        <div class="why-card reveal" style="transition-delay:.25s">
+          <div class="why-icon">🎵</div>
+          <h3>Curated Atmosphere</h3>
+          <p>Thoughtfully curated playlists, ambient lighting, and occasional live music evenings to elevate every
+            visit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TESTIMONIALS ══ -->
+  <section class="testimonials-section" id="reviews" aria-labelledby="reviews-heading">
+    <div style="max-width:1200px;margin:0 auto">
+      <div class="testimonials-header reveal">
+        <span class="section-label">What People Say</span>
+        <h2 class="section-title" id="reviews-heading">Loved by the<br><em>Community.</em></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testi-card reveal">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testi-quote">"The Doke Signature Latte is hands down the best coffee in Nepalgunj. The atmosphere is
+            cosy, the staff is warm, and the outdoor seating is stunning. This is exactly what the city needed."</p>
+          <div class="testi-author">
+            <div class="testi-avatar-placeholder" aria-hidden="true">P</div>
+            <div>
+              <div class="testi-name">Priya Shrestha</div>
+              <div class="testi-role">Regular Guest · Nepalgunj</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal" style="transition-delay:.12s">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testi-quote">"Finally, a café in Nepalgunj that feels premium without being pretentious. The
+            croissants are incredible, the cold brew is perfect, and the interior design is Instagrammable in the best
+            way."</p>
+          <div class="testi-author">
+            <div class="testi-avatar-placeholder" aria-hidden="true">R</div>
+            <div>
+              <div class="testi-name">Rahul KC</div>
+              <div class="testi-role">Food Blogger · Nepalgunj</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal" style="transition-delay:.22s">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testi-quote">"I come here every morning before work. The Masala Chiya paired with the chocolate
+            muffin is my daily ritual now. The team always remembers my name. That means everything."</p>
+          <div class="testi-author">
+            <div class="testi-avatar-placeholder" aria-hidden="true">S</div>
+            <div>
+              <div class="testi-name">Sita Thapa</div>
+              <div class="testi-role">Daily Visitor · Local Resident</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT / LOCATION ══ -->
+  <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+    <div class="contact-info reveal-left">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-title" id="contact-heading">Come Visit<br><em>Any Time.</em></h2>
+
+      <div class="info-row">
+        <div class="info-icon" aria-hidden="true">📍</div>
+        <div>
+          <div class="info-title">Location</div>
+          <div class="info-val">3JMV+9PJ Sk petrolpump,<br>Nepalgunj 21900, Nepal</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon" aria-hidden="true">🕐</div>
+        <div>
+          <div class="info-title">Opening Hours</div>
+          <div class="info-val">
+            Sunday – Friday: 08:00 AM – 10:00 PM<br>
+            Saturday: 08:00 AM – 11:00 PM<br>
+            <span style="font-size:12px;color:var(--green)">● Open Now</span>
+          </div>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon" aria-hidden="true">📞</div>
+        <div>
+          <div class="info-title">Call &amp; Reserve</div>
+          <div class="info-val">+977-9868117906<br>
+            <a href="tel:+9779868117906" style="color:var(--amber);font-size:13px;">Tap to call →</a>
+          </div>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon" aria-hidden="true">🚗</div>
+        <div>
+          <div class="info-title">Parking</div>
+          <div class="info-val">Free parking available at the premises.<br>Easy access from main road.</div>
+        </div>
+      </div>
+
+      <div class="contact-actions">
+        <button class="btn-primary" onclick="window.open('https://maps.app.goo.gl/r9h5XNTfH3uLbJM97','_blank')"
+          aria-label="Get directions to Café Doke">
+          Get Directions ›
         </button>
-        <button class="btn-outline" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
-          Our Story →
-        </button>
+        <a href="tel:+9779868117906" class="btn-outline" aria-label="Call Café Doke">Call Now</a>
       </div>
-      <div class="hero-stats">
-        <div>
-          <div class="hero-stat-num">08AM</div>
-          <div class="hero-stat-lbl">Opens Daily</div>
+    </div>
+
+    <a href="https://maps.app.goo.gl/r9h5XNTfH3uLbJM97" target="_blank" rel="noopener" class="map-block reveal-right"
+      style="display:block; text-decoration:none;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112702.4356779354!2d81.54763133852107!3d28.02703816654877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a2fe148003fdb5%3A0xeab45a3ffb1db9!2sNepalgunj!5e0!3m2!1sen!2snp!4v1715420286822!5m2!1sen!2snp"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Café Doke location on Google Maps" style="pointer-events: none;"
+        aria-label="Interactive Google Maps showing Café Doke location"></iframe>
+      <div style="position:absolute; inset:0; z-index:10; background:transparent;"></div>
+    </a>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer role="contentinfo">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-name">Café <span>Doke</span></div>
+        <div class="logo-motto">Peace · Flavor · Community</div>
+        <p>A warm corner in Nepalgunj where specialty coffee meets Nepali soul. Inspired by the Doko basket — woven with
+          roots, love &amp; community.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/cafe_doke?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank" rel="noopener" class="social-btn" aria-label="Follow Café Doke on Instagram">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 11-2.879 0 1.44 1.44 0 012.88 0z" />
+            </svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn"
+            aria-label="Like Café Doke on Facebook">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path
+                d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@cafe.doke?_r=1&_t=ZS-98Vxscagqw9" target="_blank" rel="noopener"
+            class="social-btn" aria-label="Follow Café Doke on TikTok">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path
+                d="M12.525.02c1.31-.02 2.61-.01 3.91-.04.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v7.22c0 1.34-.35 2.67-1.01 3.86-.96 1.75-2.6 3.04-4.52 3.51-1.77.43-3.69.21-5.3-.67-2.13-1.18-3.53-3.32-3.8-5.74-.29-2.58.74-5.27 2.76-6.85 1.57-1.22 3.62-1.73 5.56-1.4.08 1.36.05 2.73-.01 4.09-1.23-.39-2.67-.17-3.7.63-1.02.8-1.58 2.05-1.47 3.32.1 1.25.86 2.4 1.95 3.02 1.23.7 2.82.72 4.07.13 1.23-.57 2.05-1.72 2.21-3.05.08-1.73.01-3.46.06-5.19.16-5.46 0-10.92 0-16.38z" />
+            </svg>
+          </a>
         </div>
-        <div>
-          <div class="hero-stat-num">30+</div>
-          <div class="hero-stat-lbl">Menu Items</div>
-        </div>
-        <div>
-          <div class="hero-stat-num">100%</div>
-          <div class="hero-stat-lbl">Handcrafted</div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#story">Our Story</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#vibe">Gallery</a>
+        <a href="#why">Why Doke</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Visit Us</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <a href="#menu" onclick="switchTabById('coffee')">Coffee</a>
+        <a href="#menu" onclick="switchTabById('tea')">Tea</a>
+        <a href="#menu" onclick="switchTabById('signature')">Signature</a>
+        <a href="#menu" onclick="switchTabById('food')">Food</a>
+        <a href="#menu" onclick="switchTabById('desserts')">Desserts</a>
+        <a href="#menu" onclick="switchTabById('lounge')">Lounge</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <div class="info-item">📍 3JMV+9PJ Sk petrolpump, Nepalgunj</div>
+        <div class="info-item">🕐 8AM – 10PM Daily</div>
+        <div class="info-item">📞 +977-9868117906</div>
+        <div class="info-item">📸 @cafedoke</div>
+        <div class="info-item" style="margin-top:16px">
+          <a href="https://maps.app.goo.gl/r9h5XNTfH3uLbJM97" target="_blank" rel="noopener"
+            style="color:var(--amber)">Get Directions →</a>
         </div>
       </div>
     </div>
 
-    <div class="hero-visual">
-      <div class="hero-img-wrap">
-        <img class="hero-main-img" src="cafe_gallery/main_entrance.jpg" alt="Café Doke main entrance — a warm, inviting café in Nepalgunj" loading="eager">
-        <div class="hero-img-overlay"></div>
-      </div>
-      <div class="hero-float-card">
-        <div class="f-label">✦ Signature Pick</div>
-        <div class="f-title">Doke Latte</div>
-        <div class="f-sub">House-crafted · Rs. 199</div>
-      </div>
-      <div class="hero-float-badge">
-        <span>Est.</span>
-        <span>2025</span>
-      </div>
+    <div class="footer-bottom">
+      <p>© 2025 Café Doke · All rights reserved · Nepalgunj, Nepal</p>
+      <p class="tagline">Developed by Aneej</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="hero-scroll" aria-hidden="true">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
+  <!-- ══ JAVASCRIPT ══ -->
+  <script>
+    // ── Gallery lightbox images
+    const galleryImages = [
+      { src: 'cafe_gallery/main_entrance.jpg', alt: 'Café Doke main entrance' },
+      { src: 'cafe_gallery/outdoor_view.jpg', alt: 'Café Doke outdoor view' },
+      { src: 'cafe_gallery/outdoor_view2.jpg', alt: 'Café Doke outdoor patio' },
+      { src: 'cafe_gallery/seating_area.jpg', alt: 'Café Doke seating area' },
+      { src: 'cafe_gallery/outdoor_view_3.jpg', alt: 'Café Doke terrace' },
+      { src: 'cafe_gallery/cafe_staffs.jpg', alt: 'Café Doke team' },
+    ];
+    let currentLbIndex = 0;
 
-<!-- ══ GRAND OPENING BANNER ══ -->
-<div class="opening-banner" role="banner">
-  <div>
-    <div class="opening-badge-text">🎉 Grand Opening Announcement</div>
-    <div class="opening-headline">27 <em>Baisakh</em> — We're Open!</div>
-  </div>
-  <div class="opening-detail">
-    <strong>Near SK Petrol Pump, Karkando-18, Nepalgunj</strong>
-    <span>Come celebrate · Food · Coffee · Hookah · 08:00 AM onwards</span>
-  </div>
-  <button class="btn-opening" onclick="window.open('https://maps.app.goo.gl/r9h5XNTfH3uLbJM97','_blank')" aria-label="Get directions to Café Doke">Get Directions ›</button>
-</div>
-
-<!-- ══ STORY ══ -->
-<section class="story-section" id="story" aria-labelledby="story-heading">
-  <div class="story-grid">
-    <div class="story-text reveal-left">
-      <span class="section-label">The Doko Story</span>
-      <h2 class="section-title" id="story-heading">Woven with<br><em>Roots &amp; Soul.</em></h2>
-      <p>The <strong>Doko</strong> — a traditional Nepali woven bamboo basket — carries everything: harvests, goods, memories, and meaning. We built this café around that same spirit: a place that holds community, flavor, and peace in every corner.</p>
-      <p>Born in Nepalgunj with the energy of youth and the warmth of tradition, Café Doke blends hand-brewed specialty coffee with Nepali street bites, curated lounges, and an atmosphere that feels like coming home — even the very first time.</p>
-      <div class="story-pills">
-        <span class="pill pill-green">🌿 Indoor Plants</span>
-        <span class="pill pill-terra">🪵 Natural Wood</span>
-        <span class="pill pill-bamboo">🧺 Woven Textures</span>
-        <span class="pill pill-green">☕ Specialty Coffee</span>
-        <span class="pill pill-terra">🫶 Community First</span>
-      </div>
-    </div>
-    <div class="story-visual reveal-right">
-      <div class="story-img">
-        <img src="cafe_gallery/seating_area.jpg" alt="The warm, thoughtfully designed seating area at Café Doke" loading="lazy">
-      </div>
-      <div class="story-float-card">
-        <div class="num">2025</div>
-        <div class="lbl">Founded in Nepalgunj</div>
-      </div>
-      <div class="story-float-icon">🌿</div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ MENU ══ -->
-<section class="menu-section" id="menu" aria-labelledby="menu-heading">
-  <div style="max-width:1200px;margin:0 auto">
-    <span class="section-label">What We Serve</span>
-    <h2 class="section-title reveal" id="menu-heading">Crafted with<br><em>Passion &amp; Pride.</em></h2>
-    <p class="section-sub reveal">Every item is thoughtfully prepared — from our hand-pulled espresso shots to our freshly baked croissants, each order is a small act of love.</p>
-
-    <div class="menu-tabs" role="tablist" aria-label="Menu categories">
-      <button class="mtab active" role="tab" aria-selected="true" onclick="switchTab(this,'coffee')" id="tab-coffee">☕ Coffee</button>
-      <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'tea')" id="tab-tea">🍵 Tea</button>
-      <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'signature')" id="tab-signature">✨ Signature</button>
-      <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'food')" id="tab-food">🍽 Food</button>
-      <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'desserts')" id="tab-desserts">🍰 Desserts</button>
-      <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'lounge')" id="tab-lounge">💨 Lounge</button>
-    </div>
-
-    <!-- COFFEE -->
-    <div class="menu-panel active" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee">
-      <div class="cat-header"><div class="cat-header-line"></div><span class="cat-header-title">Coffee &amp; Espresso</span><div class="cat-header-line"></div></div>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge hot">🔥 Bestseller</div>
-            <div class="mi-name">Doke Signature Latte</div>
-            <div class="mi-desc">Our house blend, velvety steamed milk, a hint of cardamom</div>
-          </div>
-          <div class="mi-price">Rs. 199</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Flat White</div>
-            <div class="mi-desc">Double ristretto, micro-foam steamed milk, smooth finish</div>
-          </div>
-          <div class="mi-price">Rs. 169</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Cappuccino</div>
-            <div class="mi-desc">Classic Italian style, rich espresso, silky foam</div>
-          </div>
-          <div class="mi-price">Rs. 149</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Americano</div>
-            <div class="mi-desc">Bold espresso with hot water, clean and strong</div>
-          </div>
-          <div class="mi-price">Rs. 119</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge new">✨ New</div>
-            <div class="mi-name">Cold Brew</div>
-            <div class="mi-desc">12-hour slow-extracted, served over ice, smooth &amp; bold</div>
-          </div>
-          <div class="mi-price">Rs. 189</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Espresso Shot</div>
-            <div class="mi-desc">Double pulled, crema-rich, intense &amp; aromatic</div>
-          </div>
-          <div class="mi-price">Rs. 99</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Macchiato</div>
-            <div class="mi-desc">Espresso stained with a dollop of milk foam</div>
-          </div>
-          <div class="mi-price">Rs. 129</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Café Mocha</div>
-            <div class="mi-desc">Espresso, rich chocolate, steamed milk, whipped cream</div>
-          </div>
-          <div class="mi-price">Rs. 179</div>
-        </div>
-      </div>
-      <div class="menu-note">All coffees available hot or iced · Oat milk available on request · Prices include tax</div>
-    </div>
-
-    <!-- TEA -->
-    <div class="menu-panel" id="panel-tea" role="tabpanel" aria-labelledby="tab-tea">
-      <div class="cat-header"><div class="cat-header-line"></div><span class="cat-header-title">Tea &amp; Infusions</span><div class="cat-header-line"></div></div>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge hot">🔥 Bestseller</div>
-            <div class="mi-name">Nepali Masala Chiya</div>
-            <div class="mi-desc">Traditional spiced milk tea with ginger, cardamom &amp; cinnamon</div>
-          </div>
-          <div class="mi-price">Rs. 89</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Lemon Ginger Green Tea</div>
-            <div class="mi-desc">Fresh lemon, ginger, premium green tea leaves</div>
-          </div>
-          <div class="mi-price">Rs. 109</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Chamomile Honey</div>
-            <div class="mi-desc">Soothing chamomile with wildflower honey and mint</div>
-          </div>
-          <div class="mi-price">Rs. 119</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Earl Grey</div>
-            <div class="mi-desc">Classic bergamot infused black tea, served with milk</div>
-          </div>
-          <div class="mi-price">Rs. 109</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge new">✨ New</div>
-            <div class="mi-name">Rose Hibiscus Iced Tea</div>
-            <div class="mi-desc">Floral, tart &amp; refreshing, served chilled with petals</div>
-          </div>
-          <div class="mi-price">Rs. 139</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Black Milk Tea</div>
-            <div class="mi-desc">Strong Himalayan tea, full-cream milk, no sugar option</div>
-          </div>
-          <div class="mi-price">Rs. 79</div>
-        </div>
-      </div>
-      <div class="menu-note">All teas can be served iced upon request · Sweetener adjustable</div>
-    </div>
-
-    <!-- SIGNATURE -->
-    <div class="menu-panel" id="panel-signature" role="tabpanel" aria-labelledby="tab-signature">
-      <div class="cat-header"><div class="cat-header-line"></div><span class="cat-header-title">Signature Drinks</span><div class="cat-header-line"></div></div>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge hot">🔥 Must Try</div>
-            <div class="mi-name">Doko Cooler</div>
-            <div class="mi-desc">Cold brew, coconut water, mint &amp; brown sugar syrup over ice</div>
-          </div>
-          <div class="mi-price">Rs. 229</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Himalayan Haze</div>
-            <div class="mi-desc">Espresso, yak milk foam, saffron &amp; honey drizzle</div>
-          </div>
-          <div class="mi-price">Rs. 249</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Forest Matcha Latte</div>
-            <div class="mi-desc">Ceremonial-grade matcha, oat milk foam, honey swirl</div>
-          </div>
-          <div class="mi-price">Rs. 219</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge new">✨ New</div>
-            <div class="mi-name">Amber Caramel Freeze</div>
-            <div class="mi-desc">Blended cold brew, salted caramel, whipped cream top</div>
-          </div>
-          <div class="mi-price">Rs. 239</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Nepali Spiced Cocoa</div>
-            <div class="mi-desc">Dark chocolate, Himalayan spices, warm steamed milk</div>
-          </div>
-          <div class="mi-price">Rs. 199</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Fresh Fruit Smoothie</div>
-            <div class="mi-desc">Seasonal local fruits, yogurt, honey — blended fresh</div>
-          </div>
-          <div class="mi-price">Rs. 179</div>
-        </div>
-      </div>
-      <div class="menu-note">Seasonal specials may vary · Ask our barista for today's special creation</div>
-    </div>
-
-    <!-- FOOD -->
-    <div class="menu-panel" id="panel-food" role="tabpanel" aria-labelledby="tab-food">
-      <div class="cat-header"><div class="cat-header-line"></div><span class="cat-header-title">Bites &amp; Meals</span><div class="cat-header-line"></div></div>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge hot">🔥 Bestseller</div>
-            <div class="mi-name">Butter Croissant</div>
-            <div class="mi-desc">Flaky, layered &amp; freshly baked every morning. Best with our house latte.</div>
-          </div>
-          <div class="mi-price">Rs. 119</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Club Sandwich</div>
-            <div class="mi-desc">Triple-decker with chicken, egg, lettuce &amp; house sauce</div>
-          </div>
-          <div class="mi-price">Rs. 249</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Avocado Toast</div>
-            <div class="mi-desc">Sourdough, smashed avocado, cherry tomatoes, feta, EVOO</div>
-          </div>
-          <div class="mi-price">Rs. 229</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge new">✨ New</div>
-            <div class="mi-name">Shakshuka</div>
-            <div class="mi-desc">Poached eggs in spiced tomato sauce, served with bread</div>
-          </div>
-          <div class="mi-price">Rs. 269</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Cheese Pasta</div>
-            <div class="mi-desc">Al dente pasta, creamy white sauce, herbs &amp; parmesan</div>
-          </div>
-          <div class="mi-price">Rs. 289</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Veggie Wrap</div>
-            <div class="mi-desc">Grilled vegetables, hummus, fresh greens in a whole-wheat wrap</div>
-          </div>
-          <div class="mi-price">Rs. 189</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Chicken Panini</div>
-            <div class="mi-desc">Grilled chicken, mozzarella, pesto, sundried tomatoes</div>
-          </div>
-          <div class="mi-price">Rs. 239</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Breakfast Plate</div>
-            <div class="mi-desc">Eggs your way, toast, grilled tomato, hash brown &amp; sausage</div>
-          </div>
-          <div class="mi-price">Rs. 319</div>
-        </div>
-      </div>
-      <div class="menu-note">Vegetarian-friendly options available · Customisations welcome · Ask team for allergies</div>
-    </div>
-
-    <!-- DESSERTS -->
-    <div class="menu-panel" id="panel-desserts" role="tabpanel" aria-labelledby="tab-desserts">
-      <div class="cat-header"><div class="cat-header-line"></div><span class="cat-header-title">Desserts &amp; Pastries</span><div class="cat-header-line"></div></div>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge hot">🔥 Bestseller</div>
-            <div class="mi-name">Double Chocolate Muffin</div>
-            <div class="mi-desc">Dense, moist &amp; baked fresh each morning with premium cocoa.</div>
-          </div>
-          <div class="mi-price">Rs. 89</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Tiramisu</div>
-            <div class="mi-desc">Classic Italian style, espresso-soaked ladyfingers, mascarpone cream</div>
-          </div>
-          <div class="mi-price">Rs. 179</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Cheesecake (Slice)</div>
-            <div class="mi-desc">New York style, graham cracker crust, berry compote top</div>
-          </div>
-          <div class="mi-price">Rs. 159</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge new">✨ New</div>
-            <div class="mi-name">Matcha Panna Cotta</div>
-            <div class="mi-desc">Silky Japanese-style, ceremonial matcha, honey &amp; rose petal</div>
-          </div>
-          <div class="mi-price">Rs. 189</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Warm Brownie</div>
-            <div class="mi-desc">Fudgy dark chocolate brownie, served warm with vanilla ice cream</div>
-          </div>
-          <div class="mi-price">Rs. 149</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Seasonal Donut</div>
-            <div class="mi-desc">Glazed, filled &amp; flavored with the season's best ingredients</div>
-          </div>
-          <div class="mi-price">Rs. 99</div>
-        </div>
-      </div>
-      <div class="menu-note">Freshly baked daily, quantities limited · Ask for today's special dessert</div>
-    </div>
-
-    <!-- LOUNGE -->
-    <div class="menu-panel" id="panel-lounge" role="tabpanel" aria-labelledby="tab-lounge">
-      <div class="cat-header"><div class="cat-header-line"></div><span class="cat-header-title">Lounge &amp; Hookah</span><div class="cat-header-line"></div></div>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge hot">🔥 Popular</div>
-            <div class="mi-name">Classic Hookah</div>
-            <div class="mi-desc">Premium imported tobacco, charcoal-lit, 60-min session</div>
-          </div>
-          <div class="mi-price">Rs. 499</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Double Apple</div>
-            <div class="mi-desc">Signature fruity blend, freshly prepared, smooth draw</div>
-          </div>
-          <div class="mi-price">Rs. 549</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-name">Mint Freshness</div>
-            <div class="mi-desc">Cool mint blend, refreshing palate, long lasting</div>
-          </div>
-          <div class="mi-price">Rs. 499</div>
-        </div>
-        <div class="menu-item">
-          <div class="mi-left">
-            <div class="mi-badge new">✨ New</div>
-            <div class="mi-name">Doke Special Blend</div>
-            <div class="mi-desc">Our house mix — a mystery blend that guests always love</div>
-          </div>
-          <div class="mi-price">Rs. 599</div>
-        </div>
-      </div>
-      <div class="menu-note">Hookah available 4:00 PM onwards · 18+ only · Enjoy responsibly in our lounge area</div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ GALLERY / VIBE ══ -->
-<section class="vibe-section" id="vibe" aria-labelledby="vibe-heading">
-  <div style="max-width:1200px;margin:0 auto">
-    <div class="vibe-header reveal">
-      <span class="section-label">The Vibe</span>
-      <h2 class="section-title" id="vibe-heading">Experience the<br><em>Doke Atmosphere.</em></h2>
-      <p class="vibe-sub">Every corner crafted with intention — bamboo textures, warm wood, lush plants, and golden light. A space that invites you to slow down and truly be present.</p>
-    </div>
-
-    <div class="vibe-grid" id="vibeGrid">
-      <div class="vibe-cell" onclick="openLightbox(0)" tabindex="0" role="button" aria-label="View main entrance image">
-        <img class="vibe-real-img" src="cafe_gallery/main_entrance.jpg" alt="Café Doke main entrance" loading="lazy">
-        <div class="vibe-label">
-          <div class="vibe-label-sub">First Impression</div>
-          <div class="vibe-label-title">The Entrance</div>
-        </div>
-      </div>
-      <div class="vibe-cell" onclick="openLightbox(1)" tabindex="0" role="button" aria-label="View outdoor seating">
-        <img class="vibe-real-img" src="cafe_gallery/outdoor_view.jpg" alt="Café Doke outdoor view" loading="lazy">
-        <div class="vibe-label">
-          <div class="vibe-label-sub">Open Air</div>
-          <div class="vibe-label-title">Outdoor Seating</div>
-        </div>
-      </div>
-      <div class="vibe-cell" onclick="openLightbox(2)" tabindex="0" role="button" aria-label="View outdoor patio">
-        <img class="vibe-real-img" src="cafe_gallery/outdoor_view2.jpg" alt="Café Doke outdoor patio" loading="lazy">
-        <div class="vibe-label">
-          <div class="vibe-label-sub">Garden View</div>
-          <div class="vibe-label-title">Patio Space</div>
-        </div>
-      </div>
-      <div class="vibe-cell" onclick="openLightbox(3)" tabindex="0" role="button" aria-label="View seating area">
-        <img class="vibe-real-img" src="cafe_gallery/seating_area.jpg" alt="Café Doke seating area" loading="lazy">
-        <div class="vibe-label">
-          <div class="vibe-label-sub">The Interior</div>
-          <div class="vibe-label-title">Seating &amp; Comfort</div>
-        </div>
-      </div>
-      <div class="vibe-cell" onclick="openLightbox(4)" tabindex="0" role="button" aria-label="View terrace">
-        <img class="vibe-real-img" src="cafe_gallery/outdoor_view_3.jpg" alt="Café Doke terrace" loading="lazy">
-        <div class="vibe-label">
-          <div class="vibe-label-sub">Evening Light</div>
-          <div class="vibe-label-title">The Terrace</div>
-        </div>
-      </div>
-      <div class="vibe-cell" onclick="openLightbox(5)" tabindex="0" role="button" aria-label="Meet our team">
-        <img class="vibe-real-img" src="cafe_gallery/cafe_staffs.jpg" alt="The Café Doke team ready to serve you" loading="lazy">
-        <div class="vibe-label">
-          <div class="vibe-label-sub">Friendly Faces</div>
-          <div class="vibe-label-title">Our Team</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="vibe-view-all reveal">
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="btn-outline" style="color:rgba(245,237,216,.7);border-color:rgba(245,237,216,.2);" aria-label="View more photos on Instagram">
-        View More on Instagram →
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ WHY CHOOSE US ══ -->
-<section class="why-section" id="why" aria-labelledby="why-heading">
-  <div style="max-width:1200px;margin:0 auto">
-    <div class="why-header reveal">
-      <span class="section-label">Why Doke?</span>
-      <h2 class="section-title" id="why-heading">Crafted for Those<br><em>Who Appreciate.</em></h2>
-      <p class="section-sub">We pay attention to the details others overlook — because you deserve more than just a cup of coffee.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="why-icon">☕</div>
-        <h3>Fresh Specialty Coffee</h3>
-        <p>Single-origin beans, freshly ground to order. Every shot pulled with precision for optimal extraction and flavour.</p>
-      </div>
-      <div class="why-card reveal" style="transition-delay:.1s">
-        <div class="why-icon">🌿</div>
-        <h3>Nature Inspired Space</h3>
-        <p>Bamboo textures, living plants, warm wood — an environment consciously designed to bring you calm and clarity.</p>
-      </div>
-      <div class="why-card reveal" style="transition-delay:.2s">
-        <div class="why-icon">🫶</div>
-        <h3>Traditional Hospitality</h3>
-        <p>Rooted in Nepali warmth. Every guest is treated like family — because that's the Doko way.</p>
-      </div>
-      <div class="why-card reveal" style="transition-delay:.05s">
-        <div class="why-icon">📶</div>
-        <h3>Fast &amp; Free WiFi</h3>
-        <p>High-speed internet throughout, making Café Doke the ideal workspace for students, creators, and professionals.</p>
-      </div>
-      <div class="why-card reveal" style="transition-delay:.15s">
-        <div class="why-icon">🌳</div>
-        <h3>Outdoor Seating</h3>
-        <p>A beautiful outdoor garden and patio space, perfect for morning coffees, evening conversations, and groups.</p>
-      </div>
-      <div class="why-card reveal" style="transition-delay:.25s">
-        <div class="why-icon">🎵</div>
-        <h3>Curated Atmosphere</h3>
-        <p>Thoughtfully curated playlists, ambient lighting, and occasional live music evenings to elevate every visit.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ TESTIMONIALS ══ -->
-<section class="testimonials-section" id="reviews" aria-labelledby="reviews-heading">
-  <div style="max-width:1200px;margin:0 auto">
-    <div class="testimonials-header reveal">
-      <span class="section-label">What People Say</span>
-      <h2 class="section-title" id="reviews-heading">Loved by the<br><em>Community.</em></h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testi-card reveal">
-        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="testi-quote">"The Doke Signature Latte is hands down the best coffee in Nepalgunj. The atmosphere is cosy, the staff is warm, and the outdoor seating is stunning. This is exactly what the city needed."</p>
-        <div class="testi-author">
-          <div class="testi-avatar-placeholder" aria-hidden="true">P</div>
-          <div>
-            <div class="testi-name">Priya Shrestha</div>
-            <div class="testi-role">Regular Guest · Nepalgunj</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal" style="transition-delay:.12s">
-        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="testi-quote">"Finally, a café in Nepalgunj that feels premium without being pretentious. The croissants are incredible, the cold brew is perfect, and the interior design is Instagrammable in the best way."</p>
-        <div class="testi-author">
-          <div class="testi-avatar-placeholder" aria-hidden="true">R</div>
-          <div>
-            <div class="testi-name">Rahul KC</div>
-            <div class="testi-role">Food Blogger · Nepalgunj</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal" style="transition-delay:.22s">
-        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p class="testi-quote">"I come here every morning before work. The Masala Chiya paired with the chocolate muffin is my daily ritual now. The team always remembers my name. That means everything."</p>
-        <div class="testi-author">
-          <div class="testi-avatar-placeholder" aria-hidden="true">S</div>
-          <div>
-            <div class="testi-name">Sita Thapa</div>
-            <div class="testi-role">Daily Visitor · Local Resident</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ CONTACT / LOCATION ══ -->
-<section class="contact-section" id="contact" aria-labelledby="contact-heading">
-  <div class="contact-info reveal-left">
-    <span class="section-label">Find Us</span>
-    <h2 class="section-title" id="contact-heading">Come Visit<br><em>Any Time.</em></h2>
-
-    <div class="info-row">
-      <div class="info-icon" aria-hidden="true">📍</div>
-      <div>
-        <div class="info-title">Location</div>
-        <div class="info-val">Near SK Petrol Pump,<br>Karkando-18, Nepalgunj,<br>Banke, Nepal</div>
-      </div>
-    </div>
-    <div class="info-row">
-      <div class="info-icon" aria-hidden="true">🕐</div>
-      <div>
-        <div class="info-title">Opening Hours</div>
-        <div class="info-val">
-          Sunday – Friday: 08:00 AM – 10:00 PM<br>
-          Saturday: 08:00 AM – 11:00 PM<br>
-          <span style="font-size:12px;color:var(--green)">● Open Now</span>
-        </div>
-      </div>
-    </div>
-    <div class="info-row">
-      <div class="info-icon" aria-hidden="true">📞</div>
-      <div>
-        <div class="info-title">Call &amp; Reserve</div>
-        <div class="info-val">+977-XXX-XXXXXX<br>
-          <a href="tel:+977XXXXXXXXX" style="color:var(--amber);font-size:13px;">Tap to call →</a>
-        </div>
-      </div>
-    </div>
-    <div class="info-row">
-      <div class="info-icon" aria-hidden="true">🚗</div>
-      <div>
-        <div class="info-title">Parking</div>
-        <div class="info-val">Free parking available at the premises.<br>Easy access from main road.</div>
-      </div>
-    </div>
-
-    <div class="contact-actions">
-      <button class="btn-primary" onclick="window.open('https://maps.app.goo.gl/r9h5XNTfH3uLbJM97','_blank')" aria-label="Get directions to Café Doke">
-        Get Directions ›
-      </button>
-      <a href="tel:+977XXXXXXXXX" class="btn-outline" aria-label="Call Café Doke">Call Now</a>
-    </div>
-  </div>
-
-  <div class="map-block reveal-right">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.012!2d81.615!3d28.065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDAzJzU0LjAiTiA4McKwMzYnNTQuMCJF!5e0!3m2!1sen!2snp!4v1620000000000!5m2!1sen!2snp"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Café Doke location on Google Maps"
-      aria-label="Interactive Google Maps showing Café Doke location"></iframe>
-  </div>
-</section>
-
-<!-- ══ FOOTER ══ -->
-<footer role="contentinfo">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <div class="logo-name">Café <span>Doke</span></div>
-      <div class="logo-motto">Peace · Flavor · Community</div>
-      <p>A warm corner in Nepalgunj where specialty coffee meets Nepali soul. Inspired by the Doko basket — woven with roots, love &amp; community.</p>
-      <div class="footer-socials">
-        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" aria-label="Follow Café Doke on Instagram">📸</a>
-        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="Like Café Doke on Facebook">👍</a>
-        <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-btn" aria-label="Follow Café Doke on TikTok">🎵</a>
-      </div>
-    </div>
-
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <a href="#story">Our Story</a>
-      <a href="#menu">Our Menu</a>
-      <a href="#vibe">Gallery</a>
-      <a href="#why">Why Doke</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Visit Us</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Menu</h4>
-      <a href="#menu" onclick="switchTabById('coffee')">Coffee</a>
-      <a href="#menu" onclick="switchTabById('tea')">Tea</a>
-      <a href="#menu" onclick="switchTabById('signature')">Signature</a>
-      <a href="#menu" onclick="switchTabById('food')">Food</a>
-      <a href="#menu" onclick="switchTabById('desserts')">Desserts</a>
-      <a href="#menu" onclick="switchTabById('lounge')">Lounge</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Visit</h4>
-      <div class="info-item">📍 Karkando-18, Nepalgunj</div>
-      <div class="info-item">🕐 8AM – 10PM Daily</div>
-      <div class="info-item">📞 +977-XXX-XXXXXX</div>
-      <div class="info-item">📸 @cafedoke</div>
-      <div class="info-item" style="margin-top:16px">
-        <a href="https://maps.app.goo.gl/r9h5XNTfH3uLbJM97" target="_blank" rel="noopener" style="color:var(--amber)">Get Directions →</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Café Doke · All rights reserved · Nepalgunj, Nepal</p>
-    <p class="tagline">Designed with ❤️ in Nepal</p>
-  </div>
-</footer>
-
-<!-- ══ JAVASCRIPT ══ -->
-<script>
-// ── Gallery lightbox images
-const galleryImages = [
-  { src: 'cafe_gallery/main_entrance.jpg', alt: 'Café Doke main entrance' },
-  { src: 'cafe_gallery/outdoor_view.jpg',  alt: 'Café Doke outdoor view' },
-  { src: 'cafe_gallery/outdoor_view2.jpg', alt: 'Café Doke outdoor patio' },
-  { src: 'cafe_gallery/seating_area.jpg',  alt: 'Café Doke seating area' },
-  { src: 'cafe_gallery/outdoor_view_3.jpg',alt: 'Café Doke terrace' },
-  { src: 'cafe_gallery/cafe_staffs.jpg',   alt: 'Café Doke team' },
-];
-let currentLbIndex = 0;
-
-function openLightbox(i) {
-  currentLbIndex = i;
-  const img = document.getElementById('lbImg');
-  img.src = galleryImages[i].src;
-  img.alt = galleryImages[i].alt;
-  document.body.classList.add('lightbox-open');
-}
-function closeLightbox() {
-  document.body.classList.remove('lightbox-open');
-}
-function prevLbImg() {
-  currentLbIndex = (currentLbIndex - 1 + galleryImages.length) % galleryImages.length;
-  openLightbox(currentLbIndex);
-}
-function nextLbImg() {
-  currentLbIndex = (currentLbIndex + 1) % galleryImages.length;
-  openLightbox(currentLbIndex);
-}
-document.addEventListener('keydown', function(e) {
-  if (!document.body.classList.contains('lightbox-open')) return;
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') prevLbImg();
-  if (e.key === 'ArrowRight') nextLbImg();
-});
-// keyboard for gallery cells
-document.querySelectorAll('.vibe-cell').forEach(cell => {
-  cell.addEventListener('keydown', e => { if (e.key === 'Enter') cell.click(); });
-});
-
-// ── Menu tabs
-function switchTab(btn, panelId) {
-  document.querySelectorAll('.mtab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
-  document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
-  btn.classList.add('active');
-  btn.setAttribute('aria-selected','true');
-  document.getElementById('panel-' + panelId).classList.add('active');
-}
-function switchTabById(panelId) {
-  const btn = document.getElementById('tab-' + panelId);
-  if (btn) switchTab(btn, panelId);
-}
-
-// ── Nav scroll behaviour
-const nav = document.getElementById('mainNav');
-window.addEventListener('scroll', function() {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-});
-
-// ── Mobile menu toggle
-const toggle = document.getElementById('navToggle');
-const mobileMenu = document.getElementById('mobileMenu');
-function closeMobileMenu() {
-  toggle.classList.remove('open');
-  toggle.setAttribute('aria-expanded','false');
-  mobileMenu.classList.remove('open');
-}
-toggle.addEventListener('click', function() {
-  const isOpen = mobileMenu.classList.toggle('open');
-  toggle.classList.toggle('open', isOpen);
-  toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-});
-
-// ── Intersection Observer (section reveals)
-const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObs.unobserve(entry.target);
+    function openLightbox(i) {
+      currentLbIndex = i;
+      const img = document.getElementById('lbImg');
+      img.src = galleryImages[i].src;
+      img.alt = galleryImages[i].alt;
+      document.body.classList.add('lightbox-open');
     }
-  });
-}, { threshold: 0.12 });
-revealEls.forEach(el => revealObs.observe(el));
-</script>
+    function closeLightbox() {
+      document.body.classList.remove('lightbox-open');
+    }
+    function prevLbImg() {
+      currentLbIndex = (currentLbIndex - 1 + galleryImages.length) % galleryImages.length;
+      openLightbox(currentLbIndex);
+    }
+    function nextLbImg() {
+      currentLbIndex = (currentLbIndex + 1) % galleryImages.length;
+      openLightbox(currentLbIndex);
+    }
+    document.addEventListener('keydown', function (e) {
+      if (!document.body.classList.contains('lightbox-open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevLbImg();
+      if (e.key === 'ArrowRight') nextLbImg();
+    });
+    // keyboard for gallery cells
+    document.querySelectorAll('.vibe-cell').forEach(cell => {
+      cell.addEventListener('keydown', e => { if (e.key === 'Enter') cell.click(); });
+    });
+
+    // ── Menu tabs
+    function switchTab(btn, panelId) {
+      document.querySelectorAll('.mtab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      document.getElementById('panel-' + panelId).classList.add('active');
+    }
+    function switchTabById(panelId) {
+      const btn = document.getElementById('tab-' + panelId);
+      if (btn) switchTab(btn, panelId);
+    }
+
+    // ── Nav scroll behaviour
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', function () {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ── Mobile menu toggle
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function closeMobileMenu() {
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('open');
+    }
+    toggle.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // ── Intersection Observer (section reveals)
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObs.observe(el));
+  </script>
 
 </body>
+
 </html>
