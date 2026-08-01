@@ -19,9 +19,7 @@
   <meta name="twitter:image" content="cafe_gallery/main_entrance.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
 {
@@ -94,6 +92,11 @@
   <section class="hero" id="hero" aria-label="Welcome to Café Doke">
     <div class="hero-bg-pattern"></div>
     <div class="hero-woven"></div>
+    <div class="hero-media" aria-hidden="true">
+      <img class="hero-media-img" src="cafe_gallery/main_entrance.jpg"
+        alt="Café Doke main entrance — a warm, inviting café in Nepalgunj" loading="eager">
+      <div class="hero-media-overlay"></div>
+    </div>
 
     <!-- Floating leaves -->
     <div class="leaf" style="top:8%;left:3%;animation-delay:0s;" aria-hidden="true">
@@ -118,17 +121,6 @@
       <svg width="80" height="120" viewBox="0 0 80 120">
         <path d="M40 7 Q80 50 40 113 Q0 50 40 7Z" />
       </svg>
-    </div>
-
-    <div class="hero-gallery-strip" aria-label="Café Doke photo gallery preview">
-      <button class="hero-gallery-card hero-gallery-card-single" type="button" onclick="openCurrentHeroGallery()"
-        aria-label="Open featured café photo">
-        <img id="heroGalleryImgA" class="hero-gallery-img is-visible" src="cafe_gallery/main_entrance.jpg"
-          alt="Café Doke main entrance" loading="lazy">
-        <img id="heroGalleryImgB" class="hero-gallery-img" src="cafe_gallery/main_entrance.jpg"
-          alt="Café Doke main entrance" loading="lazy">
-        <span id="heroGalleryLabel">Entrance</span>
-      </button>
     </div>
 
     <div class="hero-content">
@@ -159,23 +151,6 @@
             <div class="hero-stat-num">100%</div>
             <div class="hero-stat-lbl">Handcrafted</div>
           </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-img-wrap">
-          <img class="hero-main-img" src="cafe_gallery/main_entrance.jpg"
-            alt="Café Doke main entrance — a warm, inviting café in Nepalgunj" loading="eager">
-          <div class="hero-img-overlay"></div>
-        </div>
-        <div class="hero-float-card">
-          <div class="f-label">✦ Signature Pick</div>
-          <div class="f-title">Doke Latte</div>
-          <div class="f-sub">House-crafted · Rs. 199</div>
-        </div>
-        <div class="hero-float-badge">
-          <span>Est.</span>
-          <span>2025</span>
         </div>
       </div>
     </div>
@@ -982,38 +957,6 @@
       { src: 'cafe_gallery/cafe_staffs.jpg', alt: 'Café Doke team' },
     ];
     let currentLbIndex = 0;
-    const heroGalleryLabels = ['Entrance', 'Outdoor', 'Patio', 'Seating', 'Terrace', 'Team'];
-    let currentHeroGalleryIndex = 0;
-
-    const heroGalleryImgA = document.getElementById('heroGalleryImgA');
-    const heroGalleryImgB = document.getElementById('heroGalleryImgB');
-    const heroGalleryLabel = document.getElementById('heroGalleryLabel');
-    const heroGalleryCard = document.querySelector('.hero-gallery-card-single');
-    let heroGalleryShowingA = true;
-
-    function setHeroGallery(index) {
-      currentHeroGalleryIndex = index;
-      if (!heroGalleryImgA || !heroGalleryImgB || !heroGalleryLabel || !heroGalleryCard) return;
-      const incomingImg = heroGalleryShowingA ? heroGalleryImgB : heroGalleryImgA;
-      const outgoingImg = heroGalleryShowingA ? heroGalleryImgA : heroGalleryImgB;
-      incomingImg.src = galleryImages[index].src;
-      incomingImg.alt = galleryImages[index].alt;
-      incomingImg.classList.add('is-visible');
-      outgoingImg.classList.remove('is-visible');
-      heroGalleryLabel.textContent = heroGalleryLabels[index];
-      heroGalleryCard.setAttribute('aria-label', `Open featured café photo: ${heroGalleryLabels[index]}`);
-      heroGalleryShowingA = !heroGalleryShowingA;
-    }
-
-    function openCurrentHeroGallery() {
-      openLightbox(currentHeroGalleryIndex);
-    }
-
-    if (heroGalleryImgA && heroGalleryImgB && heroGalleryLabel && heroGalleryCard) {
-      window.setInterval(() => {
-        setHeroGallery((currentHeroGalleryIndex + 1) % galleryImages.length);
-      }, 5000);
-    }
 
     function openLightbox(i) {
       currentLbIndex = i;
