@@ -87,3 +87,15 @@ Created as a modern web presentation for Café Doke.
 ## Note
 
 This project is a front-end experience designed to represent the café’s personality and make the brand feel inviting, memorable, and professional.
+
+## Recent updates (dark modern redesign)
+
+- The site was updated to a black & white modern dark theme for a premium look.
+- A lightweight gallery and lightbox were added and wired to local placeholder images located in the `cafe_gallery/` folder.
+- To make the site fully realistic, replace the placeholder SVGs in `cafe_gallery/` with the original JPG/PNG photos from your phone or Instagram exports. Filenames used by the site:
+	- `cafe_gallery/gallery1.svg` — main gallery image
+	- `cafe_gallery/doko_poster.svg` — poster / hero visual
+	- `cafe_gallery/donut.svg`, `croissant.svg`, `muffin.svg` — featured food placeholders
+	- `cafe_gallery/insta1.svg` — small instagram tile placeholder
+
+Replace these files with higher-resolution photos and keep the same filenames (or tell me the new names and I will update `index.html`). I can also optimize and resize images for web.
