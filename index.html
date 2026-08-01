@@ -57,6 +57,7 @@
 
   <!-- ══ MOBILE MENU ══ -->
   <nav class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+    <button class="mobile-menu-close" type="button" onclick="closeMobileMenu()" aria-label="Close menu">✕</button>
     <a href="#story" onclick="closeMobileMenu()">Our Story</a>
     <a href="#menu" onclick="closeMobileMenu()">Menu</a>
     <a href="#vibe" onclick="closeMobileMenu()">Gallery</a>
@@ -71,13 +72,7 @@
   <nav id="mainNav" role="navigation" aria-label="Main navigation">
     <a href="#hero" class="nav-logo" aria-label="Café Doke home">
       <div class="nav-logo-circle">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="20" cy="20" r="19" stroke="#C49A3A" stroke-width="1.2" />
-          <path d="M5 29 L13 13 L20 22 L28 9 L35 29Z" fill="#4A6741" opacity="0.85" />
-          <path d="M9 29 Q7 22 9 16 Q11 22 9 29" fill="#3D6438" />
-          <path d="M31 29 Q29 22 31 16 Q33 22 31 29" fill="#3D6438" />
-          <rect x="14" y="27" width="12" height="3" rx="1.5" fill="#C49A3A" opacity="0.9" />
-        </svg>
+        <img src="cafe_gallery/cafe_logo.jpg" alt="Café Doke logo" class="nav-logo-img" loading="eager">
       </div>
       <div class="nav-brand">Café <span>Doke</span></div>
     </a>
@@ -125,6 +120,17 @@
       </svg>
     </div>
 
+    <div class="hero-gallery-strip" aria-label="Café Doke photo gallery preview">
+      <button class="hero-gallery-card hero-gallery-card-single" type="button" onclick="openCurrentHeroGallery()"
+        aria-label="Open featured café photo">
+        <img id="heroGalleryImgA" class="hero-gallery-img is-visible" src="cafe_gallery/main_entrance.jpg"
+          alt="Café Doke main entrance" loading="lazy">
+        <img id="heroGalleryImgB" class="hero-gallery-img" src="cafe_gallery/main_entrance.jpg"
+          alt="Café Doke main entrance" loading="lazy">
+        <span id="heroGalleryLabel">Entrance</span>
+      </button>
+    </div>
+
     <div class="hero-content">
       <div class="hero-text">
         <div class="hero-badge">✦ Now Open in Nepalgunj</div>
@@ -142,7 +148,7 @@
         </div>
         <div class="hero-stats">
           <div>
-            <div class="hero-stat-num">08AM</div>
+            <div class="hero-stat-num">8 AM</div>
             <div class="hero-stat-lbl">Opens Daily</div>
           </div>
           <div>
@@ -179,20 +185,6 @@
       <div class="scroll-line"></div>
     </div>
   </section>
-
-  <!-- ══ GRAND OPENING BANNER ══ -->
-  <div class="opening-banner" role="banner">
-    <div>
-      <div class="opening-badge-text">🎉 Grand Opening Announcement</div>
-      <div class="opening-headline">27 <em>Baisakh</em> — We're Open!</div>
-    </div>
-    <div class="opening-detail">
-      <strong>Near SK Petrol Pump, Karkando-18, Nepalgunj</strong>
-      <span>Come celebrate · Food · Coffee · Hookah · 08:00 AM onwards</span>
-    </div>
-    <button class="btn-opening" onclick="window.open('https://maps.app.goo.gl/r9h5XNTfH3uLbJM97','_blank')"
-      aria-label="Get directions to Café Doke">Get Directions ›</button>
-  </div>
 
   <!-- ══ STORY ══ -->
   <section class="story-section" id="story" aria-labelledby="story-heading">
@@ -721,8 +713,8 @@
           <p
             style="font-family:var(--font-nav); font-size:11px; letter-spacing:0.1em; color:rgba(245,237,216,0.5); margin-bottom:12px; text-transform:uppercase;">
             Scan to follow us</p>
-          <img src="cafe_gallery/food_items/sticker_image.jpg" alt="Café Doke Instagram QR Code"
-            style="width:140px; height:140px; border-radius:12px; border:2px solid rgba(245,237,216,0.3); opacity:0.9;"
+          <img src="cafe_gallery/cafe_doke_qr.png" alt="Café Doke Instagram QR Code"
+            style="width:140px; height:140px; border-radius:12px; border:2px solid rgba(245,237,216,0.3); opacity:0.98; background:#fff; padding:6px;"
             onerror="this.onerror=null;this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/cafe_doke';">
         </div>
       </div>
@@ -919,6 +911,24 @@
             </svg>
           </a>
         </div>
+        <div class="footer-follow-card">
+          <div class="footer-follow-copy">
+            <span>Follow us on social</span>
+            <strong>Scan both codes</strong>
+          </div>
+          <div class="footer-qr-grid">
+            <div class="footer-qr-item">
+              <img class="footer-follow-qr" src="cafe_gallery/cafe_doke_qr.png" alt="Scan to follow Café Doke on Instagram"
+                loading="lazy">
+              <span>@cafe_doke</span>
+            </div>
+            <div class="footer-qr-item">
+              <img class="footer-follow-qr" src="cafe_gallery/food_items/doke_tiktok_qr.jpg" alt="Scan to follow Café Doke on TikTok"
+                loading="lazy">
+              <span>@cafe.doke</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="footer-col">
@@ -972,6 +982,38 @@
       { src: 'cafe_gallery/cafe_staffs.jpg', alt: 'Café Doke team' },
     ];
     let currentLbIndex = 0;
+    const heroGalleryLabels = ['Entrance', 'Outdoor', 'Patio', 'Seating', 'Terrace', 'Team'];
+    let currentHeroGalleryIndex = 0;
+
+    const heroGalleryImgA = document.getElementById('heroGalleryImgA');
+    const heroGalleryImgB = document.getElementById('heroGalleryImgB');
+    const heroGalleryLabel = document.getElementById('heroGalleryLabel');
+    const heroGalleryCard = document.querySelector('.hero-gallery-card-single');
+    let heroGalleryShowingA = true;
+
+    function setHeroGallery(index) {
+      currentHeroGalleryIndex = index;
+      if (!heroGalleryImgA || !heroGalleryImgB || !heroGalleryLabel || !heroGalleryCard) return;
+      const incomingImg = heroGalleryShowingA ? heroGalleryImgB : heroGalleryImgA;
+      const outgoingImg = heroGalleryShowingA ? heroGalleryImgA : heroGalleryImgB;
+      incomingImg.src = galleryImages[index].src;
+      incomingImg.alt = galleryImages[index].alt;
+      incomingImg.classList.add('is-visible');
+      outgoingImg.classList.remove('is-visible');
+      heroGalleryLabel.textContent = heroGalleryLabels[index];
+      heroGalleryCard.setAttribute('aria-label', `Open featured café photo: ${heroGalleryLabels[index]}`);
+      heroGalleryShowingA = !heroGalleryShowingA;
+    }
+
+    function openCurrentHeroGallery() {
+      openLightbox(currentHeroGalleryIndex);
+    }
+
+    if (heroGalleryImgA && heroGalleryImgB && heroGalleryLabel && heroGalleryCard) {
+      window.setInterval(() => {
+        setHeroGallery((currentHeroGalleryIndex + 1) % galleryImages.length);
+      }, 5000);
+    }
 
     function openLightbox(i) {
       currentLbIndex = i;
@@ -1033,6 +1075,11 @@
       const isOpen = mobileMenu.classList.toggle('open');
       toggle.classList.toggle('open', isOpen);
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        closeMobileMenu();
+      }
     });
 
     // ── Intersection Observer (section reveals)
