@@ -98,59 +98,21 @@
       <div class="hero-media-overlay"></div>
     </div>
 
-    <!-- Floating leaves -->
-    <div class="leaf" style="top:8%;left:3%;animation-delay:0s;" aria-hidden="true">
-      <svg width="90" height="130" viewBox="0 0 90 130">
-        <path d="M45 8 Q88 55 45 122 Q2 55 45 8Z" />
-      </svg>
-    </div>
-    <div class="leaf" style="top:5%;right:6%;animation-delay:2.4s;transform:scale(1.5) rotate(25deg);"
-      aria-hidden="true">
-      <svg width="70" height="110" viewBox="0 0 70 110">
-        <path d="M35 5 Q70 45 35 105 Q0 45 35 5Z" />
-      </svg>
-    </div>
-    <div class="leaf" style="bottom:12%;left:2%;animation-delay:1s;transform:scale(1.1) rotate(-20deg);"
-      aria-hidden="true">
-      <svg width="60" height="90" viewBox="0 0 60 90">
-        <path d="M30 5 Q60 38 30 85 Q0 38 30 5Z" />
-      </svg>
-    </div>
-    <div class="leaf" style="bottom:8%;right:4%;animation-delay:3.2s;transform:scale(1.4) rotate(12deg);"
-      aria-hidden="true">
-      <svg width="80" height="120" viewBox="0 0 80 120">
-        <path d="M40 7 Q80 50 40 113 Q0 50 40 7Z" />
-      </svg>
-    </div>
-
     <div class="hero-content">
       <div class="hero-text">
-        <div class="hero-badge">✦ Now Open in Nepalgunj</div>
-        <h1>Where Every Cup<br><em>Tells a Story.</em></h1>
+        <div class="hero-badge">Now Open in Nepalgunj</div>
+        <h1 class="hero-brand">Café <em>Doke</em></h1>
+        <p class="hero-lead">Where every cup tells a story.</p>
         <p class="hero-tagline">Peace · Flavor · Community</p>
         <p class="hero-desc">Inspired by the Doko — the woven bamboo basket that carries everything — Café Doke is our
           little corner of warmth, specialty coffee, and Nepali soul in the heart of Nepalgunj.</p>
         <div class="hero-actions">
           <button class="btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
-            ☕ Explore Menu
+            Explore Menu
           </button>
           <button class="btn-outline" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
-            Our Story →
+            Our Story
           </button>
-        </div>
-        <div class="hero-stats">
-          <div>
-            <div class="hero-stat-num">8 AM</div>
-            <div class="hero-stat-lbl">Opens Daily</div>
-          </div>
-          <div>
-            <div class="hero-stat-num">30+</div>
-            <div class="hero-stat-lbl">Menu Items</div>
-          </div>
-          <div>
-            <div class="hero-stat-num">100%</div>
-            <div class="hero-stat-lbl">Handcrafted</div>
-          </div>
         </div>
       </div>
     </div>
@@ -195,431 +157,229 @@
     </div>
   </section>
 
-  <!-- ══ MENU ══ -->
-  <section class="menu-section" id="menu" aria-labelledby="menu-heading">
-    <div style="max-width:1200px;margin:0 auto">
-      <span class="section-label">What We Serve</span>
-      <h2 class="section-title reveal" id="menu-heading">Crafted with<br><em>Passion &amp; Pride.</em></h2>
-      <p class="section-sub reveal">Every item is thoughtfully prepared — from our hand-pulled espresso shots to our
-        freshly baked croissants, each order is a small act of love.</p>
+  <!-- ══ MENU — UPDATED FROM CAFÉ DOKÉ PHYSICAL MENU ══ -->
+<section class="menu-section" id="menu" aria-labelledby="menu-heading">
+  <div style="max-width:1200px;margin:0 auto">
+    <span class="section-label">What We Serve</span>
+    <h2 class="section-title reveal" id="menu-heading">Crafted with<br><em>Peace, Flavor &amp; Community.</em></h2>
+    <p class="section-sub reveal">
+      Explore the Café Doké menu — from refreshing sodas and dairy favourites to Nepali starters,
+      tandoori plates, noodles, drinks, beer and our lounge selection.
+    </p>
 
-      <div class="menu-tabs" role="tablist" aria-label="Menu categories">
-        <button class="mtab active" role="tab" aria-selected="true" onclick="switchTab(this,'coffee')" id="tab-coffee">☕
-          Coffee</button>
-        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'tea')" id="tab-tea">🍵
-          Tea</button>
-        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'signature')" id="tab-signature">✨
-          Signature</button>
-        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'food')" id="tab-food">🍽
-          Food</button>
-        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'new')" id="tab-new">✨ New
-          Arrivals</button>
-        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'desserts')" id="tab-desserts">🍰
-          Desserts</button>
-        <button class="mtab" role="tab" aria-selected="false" onclick="switchTab(this,'lounge')" id="tab-lounge">💨
-          Lounge</button>
+    <div class="menu-tabs" role="tablist" aria-label="Menu categories" aria-orientation="horizontal">
+      <button class="mtab active" role="tab" aria-selected="true" aria-controls="panel-food" tabindex="0" onclick="switchTab(this,'food')" id="tab-food">🍽 Food</button>
+      <button class="mtab" role="tab" aria-selected="false" aria-controls="panel-drinks" tabindex="-1" onclick="switchTab(this,'drinks')" id="tab-drinks">🥤 Drinks</button>
+      <button class="mtab" role="tab" aria-selected="false" aria-controls="panel-beers" tabindex="-1" onclick="switchTab(this,'beers')" id="tab-beers">🍺 Beers</button>
+      <button class="mtab" role="tab" aria-selected="false" aria-controls="panel-hookah" tabindex="-1" onclick="switchTab(this,'hookah')" id="tab-hookah">💨 Hookah</button>
+      <button class="mtab" role="tab" aria-selected="false" aria-controls="panel-cigarettes" tabindex="-1" onclick="switchTab(this,'cigarettes')" id="tab-cigarettes">🚬 Cigarettes</button>
+    </div>
+
+    <!-- FOOD -->
+    <div class="menu-panel active" id="panel-food" role="tabpanel" aria-labelledby="tab-food">
+      <div class="cat-header">
+        <div class="cat-header-line"></div><span class="cat-header-title">Tandoori Items · 250 grams</span>
+        <div class="cat-header-line"></div>
       </div>
 
-      <!-- COFFEE -->
-      <div class="menu-panel active" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee">
-        <div class="cat-header">
-          <div class="cat-header-line"></div><span class="cat-header-title">Coffee &amp; Espresso</span>
-          <div class="cat-header-line"></div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="mi-left">
+            <div class="mi-name">Chicken Tandoori</div>
+          </div>
+          <div class="mi-price">Rs. 249</div>
         </div>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge hot">🔥 Bestseller</div>
-              <div class="mi-name">Doke Signature Latte</div>
-              <div class="mi-desc">Our house blend, velvety steamed milk, a hint of cardamom</div>
-            </div>
-            <div class="mi-price">Rs. 199</div>
+        <div class="menu-item">
+          <div class="mi-left">
+            <div class="mi-name">Chicken Poleko Sandeko</div>
           </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Flat White</div>
-              <div class="mi-desc">Double ristretto, micro-foam steamed milk, smooth finish</div>
-            </div>
-            <div class="mi-price">Rs. 169</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Cappuccino</div>
-              <div class="mi-desc">Classic Italian style, rich espresso, silky foam</div>
-            </div>
-            <div class="mi-price">Rs. 149</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Americano</div>
-              <div class="mi-desc">Bold espresso with hot water, clean and strong</div>
-            </div>
-            <div class="mi-price">Rs. 119</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge new">✨ New</div>
-              <div class="mi-name">Cold Brew</div>
-              <div class="mi-desc">12-hour slow-extracted, served over ice, smooth &amp; bold</div>
-            </div>
-            <div class="mi-price">Rs. 189</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Espresso Shot</div>
-              <div class="mi-desc">Double pulled, crema-rich, intense &amp; aromatic</div>
-            </div>
-            <div class="mi-price">Rs. 99</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Macchiato</div>
-              <div class="mi-desc">Espresso stained with a dollop of milk foam</div>
-            </div>
-            <div class="mi-price">Rs. 129</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Café Mocha</div>
-              <div class="mi-desc">Espresso, rich chocolate, steamed milk, whipped cream</div>
-            </div>
-            <div class="mi-price">Rs. 179</div>
-          </div>
+          <div class="mi-price">Rs. 249</div>
         </div>
-        <div class="menu-note">All coffees available hot or iced · Oat milk available on request · Prices include tax
+        <div class="menu-item">
+          <div class="mi-left">
+            <div class="mi-name">Chicken Roast</div>
+          </div>
+          <div class="mi-price">Rs. 249</div>
+        </div>
+        <div class="menu-item">
+          <div class="mi-left">
+            <div class="mi-name">Chicken Leg Piece</div>
+          </div>
+          <div class="mi-price">Rs. 249</div>
         </div>
       </div>
 
-      <!-- TEA -->
-      <div class="menu-panel" id="panel-tea" role="tabpanel" aria-labelledby="tab-tea">
-        <div class="cat-header">
-          <div class="cat-header-line"></div><span class="cat-header-title">Tea &amp; Infusions</span>
-          <div class="cat-header-line"></div>
-        </div>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge hot">🔥 Bestseller</div>
-              <div class="mi-name">Nepali Masala Chiya</div>
-              <div class="mi-desc">Traditional spiced milk tea with ginger, cardamom &amp; cinnamon</div>
-            </div>
-            <div class="mi-price">Rs. 89</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Lemon Ginger Green Tea</div>
-              <div class="mi-desc">Fresh lemon, ginger, premium green tea leaves</div>
-            </div>
-            <div class="mi-price">Rs. 109</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Chamomile Honey</div>
-              <div class="mi-desc">Soothing chamomile with wildflower honey and mint</div>
-            </div>
-            <div class="mi-price">Rs. 119</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Earl Grey</div>
-              <div class="mi-desc">Classic bergamot infused black tea, served with milk</div>
-            </div>
-            <div class="mi-price">Rs. 109</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge new">✨ New</div>
-              <div class="mi-name">Rose Hibiscus Iced Tea</div>
-              <div class="mi-desc">Floral, tart &amp; refreshing, served chilled with petals</div>
-            </div>
-            <div class="mi-price">Rs. 139</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Black Milk Tea</div>
-              <div class="mi-desc">Strong Himalayan tea, full-cream milk, no sugar option</div>
-            </div>
-            <div class="mi-price">Rs. 79</div>
-          </div>
-        </div>
-        <div class="menu-note">All teas can be served iced upon request · Sweetener adjustable</div>
+      <div class="cat-header">
+        <div class="cat-header-line"></div><span class="cat-header-title">Starter Items</span>
+        <div class="cat-header-line"></div>
       </div>
 
-      <!-- SIGNATURE -->
-      <div class="menu-panel" id="panel-signature" role="tabpanel" aria-labelledby="tab-signature">
-        <div class="cat-header">
-          <div class="cat-header-line"></div><span class="cat-header-title">Signature Drinks</span>
-          <div class="cat-header-line"></div>
-        </div>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge hot">🔥 Must Try</div>
-              <div class="mi-name">Doko Cooler</div>
-              <div class="mi-desc">Cold brew, coconut water, mint &amp; brown sugar syrup over ice</div>
-            </div>
-            <div class="mi-price">Rs. 229</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Himalayan Haze</div>
-              <div class="mi-desc">Espresso, yak milk foam, saffron &amp; honey drizzle</div>
-            </div>
-            <div class="mi-price">Rs. 249</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Forest Matcha Latte</div>
-              <div class="mi-desc">Ceremonial-grade matcha, oat milk foam, honey swirl</div>
-            </div>
-            <div class="mi-price">Rs. 219</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge new">✨ New</div>
-              <div class="mi-name">Amber Caramel Freeze</div>
-              <div class="mi-desc">Blended cold brew, salted caramel, whipped cream top</div>
-            </div>
-            <div class="mi-price">Rs. 239</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Nepali Spiced Cocoa</div>
-              <div class="mi-desc">Dark chocolate, Himalayan spices, warm steamed milk</div>
-            </div>
-            <div class="mi-price">Rs. 199</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Fresh Fruit Smoothie</div>
-              <div class="mi-desc">Seasonal local fruits, yogurt, honey — blended fresh</div>
-            </div>
-            <div class="mi-price">Rs. 179</div>
-          </div>
-        </div>
-        <div class="menu-note">Seasonal specials may vary · Ask our barista for today's special creation</div>
+      <div class="menu-grid">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Bhatmas Sandeko</div></div><div class="mi-price">Rs. 79</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Plain Peanut</div></div><div class="mi-price">Rs. 49</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Peanut Sandeko</div></div><div class="mi-price">Rs. 99</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Paneer Pakauda</div></div><div class="mi-price">Rs. 199</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Mushroom Pakauda</div></div><div class="mi-price">Rs. 149</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Corn Salt Pepper</div></div><div class="mi-price">Rs. 159</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Aloo Pakauda</div></div><div class="mi-price">Rs. 50</div></div>
       </div>
 
-      <!-- FOOD -->
-      <div class="menu-panel" id="panel-food" role="tabpanel" aria-labelledby="tab-food">
-        <div class="cat-header">
-          <div class="cat-header-line"></div><span class="cat-header-title">Bites &amp; Meals</span>
-          <div class="cat-header-line"></div>
-        </div>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge hot">🔥 Bestseller</div>
-              <div class="mi-name">Butter Croissant</div>
-              <div class="mi-desc">Flaky, layered &amp; freshly baked every morning. Best with our house latte.</div>
-            </div>
-            <div class="mi-price">Rs. 119</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Club Sandwich</div>
-              <div class="mi-desc">Triple-decker with chicken, egg, lettuce &amp; house sauce</div>
-            </div>
-            <div class="mi-price">Rs. 249</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Avocado Toast</div>
-              <div class="mi-desc">Sourdough, smashed avocado, cherry tomatoes, feta, EVOO</div>
-            </div>
-            <div class="mi-price">Rs. 229</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge new">✨ New</div>
-              <div class="mi-name">Shakshuka</div>
-              <div class="mi-desc">Poached eggs in spiced tomato sauce, served with bread</div>
-            </div>
-            <div class="mi-price">Rs. 269</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Cheese Pasta</div>
-              <div class="mi-desc">Al dente pasta, creamy white sauce, herbs &amp; parmesan</div>
-            </div>
-            <div class="mi-price">Rs. 289</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Veggie Wrap</div>
-              <div class="mi-desc">Grilled vegetables, hummus, fresh greens in a whole-wheat wrap</div>
-            </div>
-            <div class="mi-price">Rs. 189</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Chicken Panini</div>
-              <div class="mi-desc">Grilled chicken, mozzarella, pesto, sundried tomatoes</div>
-            </div>
-            <div class="mi-price">Rs. 239</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Breakfast Plate</div>
-              <div class="mi-desc">Eggs your way, toast, grilled tomato, hash brown &amp; sausage</div>
-            </div>
-            <div class="mi-price">Rs. 319</div>
-          </div>
-        </div>
-        <div class="menu-note">Vegetarian-friendly options available · Customisations welcome · Ask team for allergies
-        </div>
+      <div class="cat-header">
+        <div class="cat-header-line"></div><span class="cat-header-title">Salad Items</span>
+        <div class="cat-header-line"></div>
       </div>
 
-      <!-- NEW ARRIVALS -->
-      <div class="menu-panel" id="panel-new" role="tabpanel" aria-labelledby="tab-new">
-        <div class="cat-header">
-          <div class="cat-header-line"></div><span class="cat-header-title">New Arrivals</span>
-          <div class="cat-header-line"></div>
-        </div>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge new">✨ New</div>
-              <div class="mi-name">Special Chicken Roast</div>
-              <div class="mi-desc">Our signature roasted chicken with traditional Nepali spices</div>
-            </div>
-            <div class="mi-price">Rs. 399</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge new">✨ New</div>
-              <div class="mi-name">Doke Chowmein</div>
-              <div class="mi-desc">Stir-fried noodles with fresh vegetables, chicken, and house soy sauce</div>
-            </div>
-            <div class="mi-price">Rs. 249</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge new">✨ New</div>
-              <div class="mi-name">Current Noodles with Egg</div>
-              <div class="mi-desc">Spicy current noodles paired with a perfectly sunny-side-up egg</div>
-            </div>
-            <div class="mi-price">Rs. 189</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge new">✨ New</div>
-              <div class="mi-name">Chef's Special Momos</div>
-              <div class="mi-desc">Steamed dumplings, seasoned with a secret spice blend</div>
-            </div>
-            <div class="mi-price">Rs. 229</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge new">✨ New</div>
-              <div class="mi-name">Crispy Corn</div>
-              <div class="mi-desc">Golden fried sweet corn tossed with salt, pepper, and spring onions</div>
-            </div>
-            <div class="mi-price">Rs. 199</div>
-          </div>
-        </div>
-        <div class="menu-note">Explore our latest culinary additions · Freshly prepared just for you
-        </div>
+      <div class="menu-grid">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Plain Salad</div></div><div class="mi-price">Rs. 69</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Green Salad</div></div><div class="mi-price">Rs. 99</div></div>
       </div>
 
-      <!-- DESSERTS -->
-      <div class="menu-panel" id="panel-desserts" role="tabpanel" aria-labelledby="tab-desserts">
-        <div class="cat-header">
-          <div class="cat-header-line"></div><span class="cat-header-title">Desserts &amp; Pastries</span>
-          <div class="cat-header-line"></div>
-        </div>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge hot">🔥 Bestseller</div>
-              <div class="mi-name">Double Chocolate Muffin</div>
-              <div class="mi-desc">Dense, moist &amp; baked fresh each morning with premium cocoa.</div>
-            </div>
-            <div class="mi-price">Rs. 89</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Tiramisu</div>
-              <div class="mi-desc">Classic Italian style, espresso-soaked ladyfingers, mascarpone cream</div>
-            </div>
-            <div class="mi-price">Rs. 179</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Cheesecake (Slice)</div>
-              <div class="mi-desc">New York style, graham cracker crust, berry compote top</div>
-            </div>
-            <div class="mi-price">Rs. 159</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge new">✨ New</div>
-              <div class="mi-name">Matcha Panna Cotta</div>
-              <div class="mi-desc">Silky Japanese-style, ceremonial matcha, honey &amp; rose petal</div>
-            </div>
-            <div class="mi-price">Rs. 189</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Warm Brownie</div>
-              <div class="mi-desc">Fudgy dark chocolate brownie, served warm with vanilla ice cream</div>
-            </div>
-            <div class="mi-price">Rs. 149</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Seasonal Donut</div>
-              <div class="mi-desc">Glazed, filled &amp; flavored with the season's best ingredients</div>
-            </div>
-            <div class="mi-price">Rs. 99</div>
-          </div>
-        </div>
-        <div class="menu-note">Freshly baked daily, quantities limited · Ask for today's special dessert</div>
+      <div class="cat-header">
+        <div class="cat-header-line"></div><span class="cat-header-title">Noodles Items</span>
+        <div class="cat-header-line"></div>
       </div>
 
-      <!-- LOUNGE -->
-      <div class="menu-panel" id="panel-lounge" role="tabpanel" aria-labelledby="tab-lounge">
-        <div class="cat-header">
-          <div class="cat-header-line"></div><span class="cat-header-title">Lounge &amp; Hookah</span>
-          <div class="cat-header-line"></div>
-        </div>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge hot">🔥 Popular</div>
-              <div class="mi-name">Classic Hookah</div>
-              <div class="mi-desc">Premium imported tobacco, charcoal-lit, 60-min session</div>
-            </div>
-            <div class="mi-price">Rs. 499</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Double Apple</div>
-              <div class="mi-desc">Signature fruity blend, freshly prepared, smooth draw</div>
-            </div>
-            <div class="mi-price">Rs. 549</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-name">Mint Freshness</div>
-              <div class="mi-desc">Cool mint blend, refreshing palate, long lasting</div>
-            </div>
-            <div class="mi-price">Rs. 499</div>
-          </div>
-          <div class="menu-item">
-            <div class="mi-left">
-              <div class="mi-badge new">✨ New</div>
-              <div class="mi-name">Doke Special Blend</div>
-              <div class="mi-desc">Our house mix — a mystery blend that guests always love</div>
-            </div>
-            <div class="mi-price">Rs. 599</div>
-          </div>
-        </div>
-        <div class="menu-note">Hookah available 4:00 PM onwards · 18+ only · Enjoy responsibly in our lounge area</div>
+      <div class="menu-grid">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Current Noodles</div></div><div class="mi-price">Rs. 89</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Current Noodles with Egg</div></div><div class="mi-price">Rs. 129</div></div>
       </div>
     </div>
-  </section>
 
+    <!-- DRINKS -->
+    <div class="menu-panel" id="panel-drinks" role="tabpanel" aria-labelledby="tab-drinks" hidden>
+      <div class="cat-header">
+        <div class="cat-header-line"></div><span class="cat-header-title">Iced Soda Drinks</span>
+        <div class="cat-header-line"></div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Iced Green Apple Soda</div></div><div class="mi-price">Rs. 159</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Iced Strawberry Soda</div></div><div class="mi-price">Rs. 159</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Iced Peach Soda</div></div><div class="mi-price">Rs. 159</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Iced Blueberry Soda</div></div><div class="mi-price">Rs. 159</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Iced Lychee Soda</div></div><div class="mi-price">Rs. 159</div></div>
+      </div>
+
+      <div class="cat-header">
+        <div class="cat-header-line"></div><span class="cat-header-title">Dairy Items</span>
+        <div class="cat-header-line"></div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Mohi</div></div><div class="mi-price">Rs. 29</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Matka Raj Dahi</div></div><div class="mi-price">Rs. 60</div></div>
+      </div>
+
+      <div class="cat-header">
+        <div class="cat-header-line"></div><span class="cat-header-title">Other Drinks</span>
+        <div class="cat-header-line"></div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Coke</div></div><div class="mi-price">Rs. 59</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Sprite</div></div><div class="mi-price">Rs. 59</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Fanta</div></div><div class="mi-price">Rs. 59</div></div>
+      </div>
+    </div>
+
+    <!-- BEERS -->
+    <div class="menu-panel" id="panel-beers" role="tabpanel" aria-labelledby="tab-beers" hidden>
+      <div class="cat-header">
+        <div class="cat-header-line"></div><span class="cat-header-title">Beers</span>
+        <div class="cat-header-line"></div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Tuborg Gold</div></div><div class="mi-price">Rs. 579</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Tuborg Strong</div></div><div class="mi-price">Rs. 559</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Gorkha Strong</div></div><div class="mi-price">Rs. 429</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Gorkha Strong Small</div></div><div class="mi-price">Rs. 259</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Arna</div></div><div class="mi-price">Rs. 399</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Barahsinghe Pilsner</div></div><div class="mi-price">Rs. 579</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Barahsinghe Strong</div></div><div class="mi-price">Rs. 379</div></div>
+      </div>
+    </div>
+
+    <!-- HOOKAH -->
+    <div class="menu-panel" id="panel-hookah" role="tabpanel" aria-labelledby="tab-hookah" hidden>
+      <div class="cat-header">
+        <div class="cat-header-line"></div><span class="cat-header-title">Hookah</span>
+        <div class="cat-header-line"></div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="mi-left">
+            <div class="mi-name">Cloud Hookah Mint</div>
+          </div>
+          <div class="mi-price">Rs. 479</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CIGARETTES -->
+    <div class="menu-panel" id="panel-cigarettes" role="tabpanel" aria-labelledby="tab-cigarettes" hidden>
+      <div class="cat-header">
+        <div class="cat-header-line"></div><span class="cat-header-title">Cigarettes</span>
+        <div class="cat-header-line"></div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Marlboro Red</div></div><div class="mi-price">Rs. 25</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Marlboro Advance</div></div><div class="mi-price">Rs. 25</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Surya Red</div></div><div class="mi-price">Rs. 25</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Surya Light</div></div><div class="mi-price">Rs. 25</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Surya Fusion</div></div><div class="mi-price">Rs. 25</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Shikhar Ice</div></div><div class="mi-price">Rs. 20</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Brown Clove</div></div><div class="mi-price">Rs. 20</div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Esse</div></div><div class="mi-price">Rs. 50</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function switchTab(button, target) {
+    const tablist = button.closest('[role="tablist"]');
+    const section = button.closest('.menu-section');
+    const tabs = [...tablist.querySelectorAll('[role="tab"]')];
+    const panels = [...section.querySelectorAll('[role="tabpanel"]')];
+
+    tabs.forEach(tab => {
+      const active = tab === button;
+      tab.classList.toggle('active', active);
+      tab.setAttribute('aria-selected', String(active));
+      tab.setAttribute('tabindex', active ? '0' : '-1');
+    });
+
+    panels.forEach(panel => {
+      const active = panel.id === `panel-${target}`;
+      panel.classList.toggle('active', active);
+      panel.hidden = !active;
+    });
+  }
+
+  document.querySelectorAll('.menu-tabs[role="tablist"]').forEach(tablist => {
+    const tabs = [...tablist.querySelectorAll('[role="tab"]')];
+
+    tablist.addEventListener('keydown', event => {
+      const current = document.activeElement;
+      const index = tabs.indexOf(current);
+      if (index === -1) return;
+
+      let nextIndex = index;
+      if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'Home') nextIndex = 0;
+      if (event.key === 'End') nextIndex = tabs.length - 1;
+      if (nextIndex === index) return;
+
+      event.preventDefault();
+      tabs[nextIndex].focus();
+      tabs[nextIndex].click();
+    });
+  });
+</script>
   <!-- ══ GALLERY / VIBE ══ -->
   <section class="vibe-section" id="vibe" aria-labelledby="vibe-heading">
     <div style="max-width:1200px;margin:0 auto">
